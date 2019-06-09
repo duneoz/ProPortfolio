@@ -8,6 +8,7 @@ $('.timeline-item').on('click', function(){ showTimelineContent(this); });
 $('.close').on('click', function(){ closeCurrentContent(this); });
 
 function showTimelineContent(element){
+    console.log("this is working");
   var itemId = $(element).find('.p-timeline-carmodel').attr('data-car');
   var highlighted = $(element).find('.p-timeline-carmodel');
 
