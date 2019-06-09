@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<!-- https://codepen.io/craigweiser/pen/sdzxD timeline example -->
+<!-- https://codepen.io/simonwuyts/pen/jrpprQ  on hover events, on click makes it bigger-->
+<!-- https://codepen.io/tarabutler/pen/dopQRb on hover makes in bigger, special timeline milestone icons -->
+<!-- https://codepen.io/MilanMilosev/pen/ONNQJM gantt chart style, like the timeline bars -->
+<!-- https://codepen.io/Ridoshi/pen/araEGY horizontal scroll and MORE -->
+
+<html>
+
+<head>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/tlstyle.css">
+
+</head>
+
+<body>
+        <div class="wrap">
+                <div class="timeline-wrap">
+                  <h2 class="timeline-title">Ridoshi's responsive & interactive timeline</h2>
+                  <p style="text-align:center;">(Click on an item in the timeline for more interaction)</p>
+                  <ul class="timeline">
+                    <li class="timeline-item bmw" >
+                      <div class="p-timeline-item" >
+                        <time class="p-timeline-date" datetime="2019-05-01">May 2019</time>
+                        <span class="p-timeline-carmodel" data-car="1">Item 1</span>
+                        <div class="p-timeline-block"></div>
+                      </div>
+                    </li>
+                    <li class="timeline-item mini">
+                      <div class="p-timeline-item" >
+                        <time class="p-timeline-date" datetime="2019-06-01">June 2019</time>
+                        <span class="p-timeline-carmodel" data-car="2">Item 2</span>
+                        <div class="p-timeline-block"></div>
+                      </div>
+                    </li>
+                    <li class="timeline-item mini" >
+                      <div class="p-timeline-item" >
+                        <time class="p-timeline-date" datetime="2019-07-01">July 2019</time>
+                        <span class="p-timeline-carmodel" data-car="3">Ttem 3</span>
+                        <div class="p-timeline-block"></div>
+                      </div>
+                    </li>
+                    <li class="timeline-item bmw">
+                      <div class="p-timeline-item" >
+                        <time class="p-timeline-date" datetime="2019-08-01">August 2019</time>
+                        <span class="p-timeline-carmodel" data-car="4">Item 4</span>
+                        <div class="p-timeline-block"></div>
+                      </div>
+                    </li>
+                    <li class="timeline-item bmw" >
+                      <div class="p-timeline-item" >
+                        <time class="p-timeline-date" datetime="2019-09-01">September 2019</time>
+                        <span class="p-timeline-carmodel" data-car="5">Item 5</span>
+                        <div class="p-timeline-block"></div>
+                      </div>
+                    </li>
+                    <li class="timeline-item bmw">
+                      <div class="p-timeline-item" >
+                        <time class="p-timeline-date" datetime="2019-10-01">October 2019</time>
+                        <span class="p-timeline-carmodel" data-car="6">Item 6</span>
+                        <div class="p-timeline-block"></div>
+                      </div>
+                    </li>
+                    <li class="timeline-item bmw" >
+                      <div class="p-timeline-item" >
+                        <time class="p-timeline-date" datetime="2019-11-01">November 2019</time>
+                        <span class="p-timeline-carmodel" data-car="7">Item 7</span>
+                        <div class="p-timeline-block"></div>
+                      </div>
+                    </li>
+                    <li class="timeline-item mini">
+                      <div class="p-timeline-item" >
+                        <time class="p-timeline-date" datetime="2019-12-01">December 2019</time>
+                        <span class="p-timeline-carmodel" data-car="8">Item 8</span>
+                        <div class="p-timeline-block"></div>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="timeline-content">
+              
+                     <div class="p-timeline-content" data-car="1">
+                      <div class="timeline-content-card">
+                        <h3 class="timeline-content-title bmw">Item 1</h3>
+                        <time class="timeline-content-date" datetime="2019-05-01">Release date: May 1,  2019</time>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim accumsan aliquam. Quisque molestie rhoncus libero, ut euismod nisl. Duis interdum maximus odio, sed pretium magna pretium eget. Donec dolor diam, congue quis velit id, pulvinar condimentum sapien. Sed gravida auctor nibh, in vehicula eros volutpat sit amet. Duis finibus rhoncus massa vel convallis. Duis placerat eleifend odio, quis faucibus libero. Vestibulum nibh turpis, blandit sed porta vel, pellentesque viverra odio.
+              
+              Vestibulum congue nibh quam, non tincidunt dolor tincidunt at. Ut eu volutpat sapien. Etiam eu vestibulum leo. Aenean eget mauris fermentum, lacinia ipsum vel, imperdiet urna. Sed velit eros, elementum nec metus non, congue consequat felis. Nulla ac tellus finibus, fermentum odio in, finibus ex. Sed eu lacus enim.
+              
+              Integer a ipsum enim. In hac habitasse platea dictumst. In aliquam magna et erat blandit, id consequat dui commodo. Proin a fermentum turpis, non vehicula mi. Sed sit amet arcu pretium, aliquam dui nec, tempus orci. Sed facilisis felis vitae metus sodales fermentum viverra quis ex. Sed velit lacus, elementum eget porttitor tempus, eleifend at mi. Proin in ornare dolor, vitae sollicitudin augue.</p>
+                        <a class="btn btn-blauw timeline-content-button" href="javascript:void();" title="Lees meer">Read more</a>
+                        <div class="close" data-type-close></div>
+                      </div>
+                      <div class="timeline-content-image">
+                        <img src="https://via.placeholder.com/400x200/1C69D4/fff"/>
+                      </div>
+                    </div>
+                     <div class="p-timeline-content" data-car="2">
+                      <div class="timeline-content-card">
+                        <h3 class="timeline-content-title mini">Item 2</h3>
+                        <time class="timeline-content-date" datetime="2019-06-01">Release date: June 1, 2019</time>
+                        <p> BL Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. </p>
+                        <a class="btn btn-btn-oranje timeline-content-button" href="javascript:void();" title="Lees meer">Read more</a>
+                        <div class="close" data-type-close></div>
+                      </div>
+                      <div class="timeline-content-image">
+                        <img src="https://via.placeholder.com/900x500/ed9300/fff" alt="placeholder"/>
+                      </div>
+                    </div>
+                    <div class="p-timeline-content" data-car="3">
+                      <div class="timeline-content-card">
+                        <h3 class="timeline-content-title mini">Item 3</h3>
+                        <time class="timeline-content-date" datetime="2019-07-01">Release date: July 1, 2019</time>
+                        <p> L Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. </p>
+                        <a class="btn btn-btn-oranje timeline-content-button" href="javascript:void();" title="Lees meer">Read more</a>
+                        <div class="close" data-type-close></div>
+                      </div>
+                      <div class="timeline-content-image">
+                        <img src="https://via.placeholder.com/500x200/ed9300/fff" alt="placeholder"/>
+                      </div>
+                    </div>
+                     <div class="p-timeline-content" data-car="4">
+                      <div class="timeline-content-card">
+                        <h3 class="timeline-content-title bmw">Item 4</h3>
+                        <time class="timeline-content-date" datetime="2019-08-01">Release date: August 1, 2019</time>
+                        <p> BL Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. </p>
+                        <a class="btn btn-blauw timeline-content-button" href="javascript:void();" title="Lees meer">Read more</a>
+                        <div class="close" data-type-close></div>
+                      </div>
+                      <div class="timeline-content-image">
+                        <img src="https://via.placeholder.com/900x900/1C69D4/fff" alt="placeholder"/>
+                      </div>
+                    </div>
+                    <div class="p-timeline-content" data-car="5">
+                      <div class="timeline-content-card">
+                        <h3 class="timeline-content-title bmw">Item 5</h3>
+                        <time class="timeline-content-date" datetime="2019-09-01">Release date: September 1, 2019</time>
+                        <p> L Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. </p>
+                        <a class="btn btn-blauw timeline-content-button" href="javascript:void();" title="Lees meer">Read more</a>
+                        <div class="close" data-type-close></div>
+                      </div>
+                      <div class="timeline-content-image">
+                        <img src="https://via.placeholder.com/900x1200/1C69D4/fff" alt="placeholder"/>
+                      </div>
+                    </div>
+                     <div class="p-timeline-content" data-car="6">
+                      <div class="timeline-content-card">
+                        <h3 class="timeline-content-title bmw">Item 6</h3>
+                        <time class="timeline-content-date" datetime="2019-10-01">Release date: October 1, 2019</time>
+                        <p> BL Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. </p>
+                        <a class="btn btn-blauw timeline-content-button" href="javascript:void();" title="Lees meer">Read more</a>
+                        <div class="close" data-type-close></div>
+                      </div>
+                      <div class="timeline-content-image">
+                        <img src="https://via.placeholder.com/600x500/1C69D4/fff" alt="placeholder"/>
+                      </div>
+                    </div>
+                    <div class="p-timeline-content" data-car="7">
+                      <div class="timeline-content-card">
+                        <h3 class="timeline-content-title bmw">Item 7</h3>
+                        <time class="timeline-content-date" datetime="2019-11-01">Release date: November 1, 2019</time>
+                        <p> L Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. </p>
+                        <a class="btn btn-blauw timeline-content-button" href="javascript:void();" title="Lees meer">Read more</a>
+                        <div class="close" data-type-close></div>
+                      </div>
+                      <div class="timeline-content-image">
+                        <img src="https://via.placeholder.com/900x500/1C69D4/fff" alt="placeholder"/>
+                      </div>
+                    </div>
+                     <div class="p-timeline-content" data-car="8">
+                      <div class="timeline-content-card">
+                        <h3 class="timeline-content-title mini">Item 8</h3>
+                        <time class="timeline-content-date" datetime="2019-12-01">Release date: December 1, 2019</time>
+                        <p> BL Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. </p>
+                        <a class="btn btn-btn-oranje timeline-content-button" href="javascript:void();" title="Lees meer">Read more</a>
+                        <div class="close" data-type-close></div>
+                      </div>
+                      <div class="timeline-content-image">
+                        <img src="https://via.placeholder.com/900x500/ed9300/fff" alt="placeholder"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+</body>
+
+</html>

@@ -3,7 +3,7 @@
 //map variables
 const apiKey = "AIzaSyCHaaYyvWCZ5KvA9iutq2bVaXPqhNeGPUk";
 const apiLib = "&libraries=places";
-const latitude = 33;
+const latitude = 15;
 const longitude = -15;
 const initZoom = 3;
 
