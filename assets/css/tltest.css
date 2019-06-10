@@ -7,6 +7,10 @@
     height: auto;
 }
 
+.timeline::-webkit-scrollbar {
+    display: none;
+}
+
 .timeline {
     position: relative;
     overflow-x: auto;
@@ -30,10 +34,10 @@
     display:flex;
     justify-content: space-between;
     flex-flow:wrap;
-    /* -webkit-transition: max-width .2s,-webkit-transform .4s ease-out; */
-    /* transition: max-width .2s,-webkit-transform .4s ease-out; */
+    -webkit-transition: max-width .2s,-webkit-transform .4s ease-out;
+    transition: max-width .2s,-webkit-transform .4s ease-out;
     transition: max-width .2s,transform .4s ease-out;
-    /* transition: max-width .2s,transform .4s ease-out,-webkit-transform .4s ease-out; */
+    transition: max-width .2s,transform .4s ease-out,-webkit-transform .4s ease-out;
     cursor: pointer;
     margin:0 50px; 
     height:auto;
@@ -42,6 +46,7 @@
 .p-timeline-item {
     text-align: center;
     padding: 30px 40px;
+    transition: max-width .2s,transform .4s ease-out;
 }
 
 .p-timeline-date {
@@ -80,4 +85,17 @@
     transform:scale(1.1); 
     transition:transform .3s ease;}
 
-.bmw:hover time, .mini:hover time, .bmw time, .mini time{transition:color .3s ease;}
+.school:hover .p-timeline-block{background-color: darkviolet;}
+
+
+
+/* .bmw:hover time, .mini:hover time, .bmw time, .mini time{transition:color .3s ease;} */
+
+/* .school:hover time, .work:hover time, .specproj:hover time, .shcool time, .work time, .specproj time{transition:color .3s ease}
+
+.school:hover .p-timeline-block{background-color: darkviolet}
+
+.work:hover .p-timeline-block{background-color: goldenrod}
+
+.specproj:hover .p-timeline-block{background-color: green} */
+
