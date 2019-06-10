@@ -1,0 +1,83 @@
+.fixed-to-bottom {
+    /* border: 1px solid red; */
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+    height: auto;
+}
+
+.timeline {
+    position: relative;
+    overflow-x: auto;
+    background-repeat: repeat-x;
+    background-size: 10px 2px;
+    background-position: center top 60%;
+    background-image: linear-gradient(90deg,#000 66%,transparent 0);
+    padding: 20px 0;
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: row nowrap;
+    transition: height .2s ease-out;
+    transition: height .2s ease-out;
+    transition: height .2s ease-out;
+}
+
+.timeline-item {
+    /* display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox; */
+    display:flex;
+    justify-content: space-between;
+    flex-flow:wrap;
+    /* -webkit-transition: max-width .2s,-webkit-transform .4s ease-out; */
+    /* transition: max-width .2s,-webkit-transform .4s ease-out; */
+    transition: max-width .2s,transform .4s ease-out;
+    /* transition: max-width .2s,transform .4s ease-out,-webkit-transform .4s ease-out; */
+    cursor: pointer;
+    margin:0 50px; 
+    height:auto;
+}
+
+.p-timeline-item {
+    text-align: center;
+    padding: 30px 40px;
+}
+
+.p-timeline-date {
+    width: 100%;
+    font-weight:600;
+    font-size:20px;
+}
+
+.p-timeline-carmodel {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    text-align: center;
+
+}
+
+.p-timeline-block {
+    display: block;
+    min-width:55px;
+    min-height:55px;
+    max-width:55px;
+    max-height:55px;
+    border: solid 0px black;
+    border-radius:50%;
+    background-color:#beac95;
+    /* position:relative; */
+    top:3px;
+    left:48px;
+    /* margin-bottom:20px; */
+    margin: auto;
+}
+
+.p-timeline-item:hover{
+    transform:scale(1.1); 
+    transition:transform .3s ease;}
+
+.bmw:hover time, .mini:hover time, .bmw time, .mini time{transition:color .3s ease;}
