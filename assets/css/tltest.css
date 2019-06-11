@@ -74,11 +74,11 @@
     border: solid 0px black;
     border-radius:50%;
     background-color:#beac95;
-    /* position:relative; */
     top:3px;
     left:48px;
-    /* margin-bottom:20px; */
     margin: auto;
+    -webkit-transition: background-color .5s ease-in-out;
+    transition: background-color .5s ease-in-out;
 }
 
 .p-timeline-item:hover{
@@ -87,15 +87,6 @@
 
 .school:hover .p-timeline-block{background-color: darkviolet;}
 
+.work:hover .p-timeline-block{background-color: goldenrod;}
 
-
-/* .bmw:hover time, .mini:hover time, .bmw time, .mini time{transition:color .3s ease;} */
-
-/* .school:hover time, .work:hover time, .specproj:hover time, .shcool time, .work time, .specproj time{transition:color .3s ease}
-
-.school:hover .p-timeline-block{background-color: darkviolet}
-
-.work:hover .p-timeline-block{background-color: goldenrod}
-
-.specproj:hover .p-timeline-block{background-color: green} */
-
+.specproj:hover .p-timeline-block{background-color: green;}
