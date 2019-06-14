@@ -44,9 +44,9 @@
   }
   .btn-blauw{background-color: #1C69D4; color: white;}
   .btn-btn-oranje {background-color: #ed9300; color: white;}  
-  /* .timeline-wrap{position: relative; padding: 0 20px;} */
+  .timeline-wrap{position: relative; padding: 0 20px;}
   /* .timeline-wrap{position: fixed; bottom: 50px; padding:0 20px;} */
-  .timeline-wrap{position: absolute; bottom: 50px; height: auto; padding: 0 20px; overflow: scroll;}
+  /* .timeline-wrap{position: absolute; bottom: 50px; height: auto; padding: 0 20px; overflow: scroll;} */
   .timeline{
     overflow-x:auto;
     /* -webkit-overflow-scrolling: touch; */
@@ -94,8 +94,7 @@
   .mini:hover time, .mini.i-is-active time, .timeline-content-title.mini{color:#ed9300;}
   .bmw:hover time, .mini:hover time, .bmw time, .mini time{transition:color .3s ease;}
   .p-timeline-item.i-is-active{cursor: default;}
-  .bmw:hover .p-timeline-block{background-color:#1C69D4;}
-  .mini:hover .p-timeline-block{background-color:#ed9300;}
+  x
   .bmw .p-timeline-block, .mini .p-timeline-block, .mini:hover .p-timeline-block, .bmw:hover .p-timeline-block {transition:background-color 1s ease;}
   .p-timeline-date, .p-timeline-carmodel, .p-timeline-block{width:100%;}
   .p-timeline-date{font-weight:600;font-size:20px;}

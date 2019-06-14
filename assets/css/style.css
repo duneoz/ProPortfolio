@@ -2,8 +2,143 @@
     height: 100%;
 }
 
+.overlay {
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
+
+/* ----------TIMELINE CSS---------- */
+.fixed-to-bottom {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+    height: auto;
+    z-index: 2;
+}
+
+.timeline::-webkit-scrollbar {
+    display: none;
+}
+
+.timeline {
+    position: relative;
+    overflow-x: auto;
+    background-repeat: repeat-x;
+    background-size: 10px 2px;
+    background-position: center top 60%;
+    padding: 20px 0;
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: row nowrap;
+    transition: height .2s ease-out;
+    transition: height .2s ease-out;
+    transition: height .2s ease-out;
+}
+
+/* .line{
+    position: absolute;
+    bottom: 50%;
+    background-image: linear-gradient(90deg, aquamarine 66%,transparent 0);
+    background-repeat: repeat-x;
+    widows: 100%;
+} */
+
+.line{
+    position: absolute;
+    bottom: 25%;
+    border-bottom: 5px dotted aquamarine;
+    width: 100%;
+}
+
+.timeline-item {
+    /* display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox; */
+    display:flex;
+    justify-content: space-between;
+    flex-flow:wrap;
+    -webkit-transition: max-width .2s,-webkit-transform .4s ease-out;
+    transition: max-width .2s,-webkit-transform .4s ease-out;
+    transition: max-width .2s,transform .4s ease-out;
+    transition: max-width .2s,transform .4s ease-out,-webkit-transform .4s ease-out;
+    cursor: pointer;
+    margin:0 50px; 
+    height:auto;
+}
+
+.p-timeline-item {
+    text-align: center;
+    padding: 30px 40px;
+    transition: max-width .2s,transform .4s ease-out;
+    width: 250px;
+}
+
+.p-timeline-date {
+    width: 100%;
+    font-weight:600;
+    font-size:20px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+.p-timeline-carmodel {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    text-align: center;
+    color: white;
+    font-family: 'Damion', sans-serif;
+
+}
+
+.p-timeline-block {
+    display: block;
+    min-width:55px;
+    min-height:55px;
+    max-width:55px;
+    max-height:55px;
+    border: solid 0px black;
+    border-radius:50%;
+    background-color: aquamarine;
+    /* top:3px;
+    left:48px; */
+    bottom: 25%;
+    margin: auto;
+    -webkit-transition: background-color .5s ease-in-out;
+    transition: background-color .5s ease-in-out;
+}
+
+.p-timeline-item:hover{
+    transform:scale(1.1); 
+    transition:transform .3s ease;}
+
+.school:hover .p-timeline-block{background-color: darkviolet;}
+
+.work:hover .p-timeline-block{background-color: goldenrod;}
+
+.specproj:hover .p-timeline-block{background-color: green;}
+
+.schoolpic {
+    content:url(../images/school.png)
+}
+
+.workpic {
+    content:url(../images/work.png)
+}
+
+.specprojpic {
+    content:url(../images/specproj.png)
+}
+

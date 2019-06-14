@@ -90,3 +90,15 @@
 .work:hover .p-timeline-block{background-color: goldenrod;}
 
 .specproj:hover .p-timeline-block{background-color: green;}
+
+.schoolpic {
+    content:url(../images/school.png)
+}
+
+.workpic {
+    content:url(../images/work.png)
+}
+
+.specprojpic {
+    content:url(../images/specproj.png)
+}

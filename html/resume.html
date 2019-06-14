@@ -4,22 +4,169 @@
 
 <head>
 
-    <title>Resume | Nick Meyers</title>
+    <title>Nick Meyers | Resume</title>
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!-- Raleway + Damion Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Damion|Raleway:100|Yellowtail&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
+    <div class="overlay" onClick="style.pointerEvents='none'"></div>
+
     <div id="map"></div>
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHaaYyvWCZ5KvA9iutq2bVaXPqhNeGPUk&callback=initMap"></script>
+    <!-- TIMELINE -->
+    <div class="fixed-to-bottom">
+        <div class="line"></div>
+        <ul class="timeline">
+            <li class="timeline-item work">
+                <div id="item1" class="p-timeline-item">
+                    <time class="p-timeline-date" datetime="2008-01-02">Severance Tax Accounting Intern</time>
+                    <span class="p-timeline-carmodel" data-car="1">XTO Energy, Inc.</span>
+                    <div class="p-timeline-block workpic"></div>
+                </div>
+            </li>
+            <li class="timeline-item work">
+                <div id="item2" class="p-timeline-item">
+                    <time class="p-timeline-date" datetime="2010-08-01">TCU Supply Chain Student Executive
+                        Intern</time>
+                    <span class="p-timeline-carmodel" data-car="2">Alcon Labs</span>
+                    <div class="p-timeline-block workpic"></div>
+                </div>
+            </li>
+            <li class="timeline-item school">
+                <div id="item3" class="p-timeline-item">
+                    <time class="p-timeline-date" datetime="2011-05-01">Bachelor of Business Administration</time>
+                    <span class="p-timeline-carmodel" data-car="3">TCU Neeley School of Business</span>
+                    <div class="p-timeline-block schoolpic"></div>
+                </div>
+            </li>
+            <li class="timeline-item work">
+                <div id="item4" class="p-timeline-item">
+                    <time class="p-timeline-date" datetime="2011-06-01">Leadership Development Program
+                        Participant</time>
+                    <span class="p-timeline-carmodel" data-car="4">Textron, Inc.</span>
+                    <div class="p-timeline-block workpic"></div>
+                </div>
+            </li>
+            <li class="timeline-item work">
+                <div id="item5" class="p-timeline-item">
+                    <time class="p-timeline-date" datetime="2011-06-01">Safety Process Leader</time>
+                    <span class="p-timeline-carmodel" data-car="5">Cessna Aircraft</span>
+                    <div class="p-timeline-block workpic"></div>
+                </div>
+            </li>
+            <li class="timeline-item work">
+                <div id="item6" class="p-timeline-item">
+                    <time class="p-timeline-date" datetime="2012-03-01">Supplier Development Specialist</time>
+                    <span class="p-timeline-carmodel" data-car="6">Bell Helicopter</span>
+                    <div class="p-timeline-block workpic"></div>
+                </div>
+            </li>
+            <li class="timeline-item work">
+                <div id="item7" class="p-timeline-item">
+                    <time class="p-timeline-date" datetime="2012-09-01">Buyer/Planner</time>
+                    <span class="p-timeline-carmodel" data-car="7">E-Z-GO</span>
+                    <div class="p-timeline-block workpic"></div>
+                </div>
+            </li>
+            <li class="timeline-item work">
+                <div id="item8" class="p-timeline-item">
+                    <time class="p-timeline-date" datetime="2013-03-01">Operations Supervisor</time>
+                    <span class="p-timeline-carmodel" data-car="8">Greenlee</span>
+                    <div class="p-timeline-block workpic"></div>
+                </div>
+            </li>
+            <li class="timeline-item work">
+                <div id="item9" class="p-timeline-item">
+                    <time class="p-timeline-date" datetime="2013-09-01">EHS Continuous Improvement Leader</time>
+                    <span class="p-timeline-carmodel" data-car="8">Textron Aviation</span>
+                    <div class="p-timeline-block workpic"></div>
+                </div>
+            </li>
+            <li class="timeline-item specproj">
+                <div id="item10" class="p-timeline-item">
+                    <time class="p-timeline-date" datetime="2013-03-01">Energy Audit</time>
+                    <span class="p-timeline-carmodel" data-car="8">Chihuahua City, Chihuahua, Mexico</span>
+                    <div class="p-timeline-block specprojpic"></div>
+                </div>
+            </li>
+            <li class="timeline-item work">
+                <div id="item11" class="p-timeline-item">
+                    <time class="p-timeline-date" datetime="2014-01-01">EHS Engineer</time>
+                    <span class="p-timeline-carmodel" data-car="8">Textron Aviation</span>
+                    <div class="p-timeline-block workpic"></div>
+                </div>
+            </li>
+            <li class="timeline-item work">
+                <div id="item12" class="p-timeline-item">
+                    <time class="p-timeline-date" datetime="2015-06-01">Safety Engineer</time>
+                    <span class="p-timeline-carmodel" data-car="8">Leatherman Tool Group</span>
+                    <div class="p-timeline-block workpic"></div>
+                </div>
+            </li>
+            <li class="timeline-item specproj">
+                <div id="item13" class="p-timeline-item">
+                    <time class="p-timeline-date" datetime="2017-01-01">Safety Audit</time>
+                    <span class="p-timeline-carmodel" data-car="8">Yangjiang, Guangdong, China</span>
+                    <div class="p-timeline-block specprojpic"></div>
+                </div>
+            </li>
+            <li class="timeline-item work">
+                <div id="item14" class="p-timeline-item">
+                    <time class="p-timeline-date" datetime="2017-07-01">EHS Leader</time>
+                    <span class="p-timeline-carmodel" data-car="8">Leatherman Tool Group</span>
+                    <div class="p-timeline-block workpic"></div>
+                </div>
+            </li>
+            <li class="timeline-item school">
+                <div id="item15" class="p-timeline-item">
+                    <time class="p-timeline-date" datetime="2017-08-11">Master of Engineering | Industrial
+                        Engineering</time>
+                    <span class="p-timeline-carmodel" data-car="8">Clemson University</span>
+                    <div class="p-timeline-block schoolpic"></div>
+                </div>
+            </li>
+            <li class="timeline-item work">
+                <div id="item16" class="p-timeline-item">
+                    <time class="p-timeline-date" datetime="2017-10-01">Project Manager</time>
+                    <span class="p-timeline-carmodel" data-car="8">Leatherman Tool Group</span>
+                    <div class="p-timeline-block workpic"></div>
+                </div>
+            </li>
+            <li class="timeline-item specproj">
+                <div id="item17" class="p-timeline-item">
+                    <time class="p-timeline-date" datetime="2019-06-01">Strategic Planning Retreat</time>
+                    <span class="p-timeline-carmodel" data-car="8">Cabo San Lucas, Baja California Sur,
+                        Mexico</span>
+                    <div class="p-timeline-block specprojpic"></div>
+                </div>
+            </li>
+            <li class="timeline-item school">
+                <div id="item18" class="p-timeline-item">
+                    <time class="p-timeline-date" datetime="2019-09-01">Full Stack Development Program</time>
+                    <span class="p-timeline-carmodel" data-car="8">University of Oregon</span>
+                    <div class="p-timeline-block schoolpic"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHaaYyvWCZ5KvA9iutq2bVaXPqhNeGPUk&callback=initMap"></script>
     <script type="text/javascript" src="../assets/js/gmap.js"></script>
-    
+    <script type="text/javascript" src="../assets/js/timeline.js"></script>
+    <!-- Mouse Wheel -->
+    <script type='text/javascript' src='../assets/js/jquery.mousewheel.min.js'></script>
+
 </body>
 
 </html>

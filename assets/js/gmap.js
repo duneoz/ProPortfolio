@@ -16,6 +16,7 @@ function initMap() {
         scaleControl: true,
         streetViewControl: false,
         fullscreenControl: false,
+        zoomControl: false,
         // custom styling
         styles: [
             {
@@ -249,7 +250,7 @@ var work = [
 ]
 
 var schools = [
-    ['Oregon University', 45.5155, -122.6793],
+    ['University of Oregon', 45.5155, -122.6793],
     ['Clemson University', 34.6834, -82.8374],
     ['TCU', 32.7555, -97.3308]
 ]
@@ -266,14 +267,18 @@ function setWorkMarker(map) {
         size: new google.maps.Size(35, 31),
     };
 
+
     for (var i = 0; i < work.length; i++) {
         var city = work[i];
         var marker = new google.maps.Marker({
             position: { lat: city[1], lng: city[2] },
             map: map,
             icon: workIcon,
-            title: city[0]
+            title: city[0],
+            id: "work" + [i]
         });
+
+        console.log(marker.id);
     }
     console.log("this fired");
 };
@@ -290,8 +295,11 @@ function setSchoolMarker(map) {
             position: { lat: school[1], lng: school[2] },
             map: map,
             icon: schoolIcon,
-            title: school[0]
+            title: school[0],
+            id: "school" + [i]
         });
+
+        console.log(marker.id);
     };
 };
 
@@ -304,15 +312,22 @@ function setSpecprojMarker(map) {
     for (var i = 0; i < specprojs.length; i++) {
         var specproj = specprojs[i];
         var marker = new google.maps.Marker({
-            position: {lat: specproj[1], lng: specproj[2]},
+            position: { lat: specproj[1], lng: specproj[2] },
             map: map,
             icon: specprojIcon,
-            title: specproj[0]
+            title: specproj[0],
+            id: "specproj" + [i]
         });
+
+        console.log(marker.id);
     };
 };
 
-
+$(document).ready(function () {
+    $(".p-timeline-item").hover(function(){
+        console.log($(this).attr("id"));
+    })
+});
 
 //     var specprojIcon = {
 //         url: 'assets/images/specproj.png',

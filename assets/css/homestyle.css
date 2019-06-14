@@ -1,0 +1,90 @@
+/* ---------- HOME CSS ---------- */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #3f3f3f;
+    z-index: 0;
+}
+
+.projenclose {
+    overflow: hidden;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.proj {
+    height: 100vh;
+    /* height: calc(100vh - 2px); */
+    /* display: inline-block; */
+    transform: skewX(10deg);
+    /* border: 1px solid black; */
+    width: 10%; 
+    float: right;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    transition: width .5s ease;
+    
+
+}
+
+.notskew {
+    /* margin-right: 50px; */
+    color: whitesmoke;
+    font-family: 'Raleway', sans-serif;
+    font-size: 28px;
+    /* transform: skewX(-10deg); */
+    transform: rotate(-90deg);
+    position: absolute;
+    bottom: 50px;
+    left: 0px;
+}
+
+.proj:hover {
+    width: 20%;
+}
+
+#proj1 {
+    background-color: #8f8f8f;
+}
+
+#proj2 {
+    background-color: #7f7f7f;
+}
+
+#proj3 {
+    background-color: #6f6f6f;
+}
+
+#proj4 {
+    background-color: #5f5f5f;
+}
+
+#proj5 {
+    background-color: #4f4f4f;
+}
+
+.leftsd{
+    position: absolute;
+    width: 50%;
+    z-index: 2;
+    bottom: 3px;
+}
+
+.name{
+    float: left;
+    font-family: 'Raleway', sans-serif;
+    color: ghostwhite;
+    font-size: 100px;
+}
+
+.desc{
+    float: left;
+    font-family: 'Yellowtail', cursive;
+    color: rgb(159, 125, 197);
+    font-size: 60px;
+}
