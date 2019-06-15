@@ -325,7 +325,15 @@ function setSpecprojMarker(map) {
 
 $(document).ready(function () {
     $(".p-timeline-item").hover(function(){
+
         console.log($(this).attr("id"));
+
+        var checkId = $(this).attr("id");
+
+        if (checkId === "item1") {
+            console.log("This is item1");
+            
+        }
     })
 });
 

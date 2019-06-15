@@ -27,7 +27,11 @@ html, body {
     overflow: hidden;
     margin: 0;
     padding: 0;
-    transition: width .5s ease;
+    transition: padding .5s ease;
+    text-align: left;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
     
 
 }
@@ -36,16 +40,20 @@ html, body {
     /* margin-right: 50px; */
     color: whitesmoke;
     font-family: 'Raleway', sans-serif;
-    font-size: 28px;
+    font-size: 60px;
     /* transform: skewX(-10deg); */
     transform: rotate(-90deg);
     position: absolute;
     bottom: 50px;
     left: 0px;
+    width: 120px;
+    height: 60px;
+    display: inline-block;
+    white-space: nowrap;
 }
 
 .proj:hover {
-    width: 20%;
+    padding-right: 10%;
 }
 
 #proj1 {
