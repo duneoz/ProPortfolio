@@ -7,6 +7,11 @@ html, body {
     z-index: 0;
 }
 
+p {
+    margin: 0;
+    padding: 0;
+}
+
 .projenclose {
     overflow: hidden;
     position: absolute;
@@ -32,8 +37,6 @@ html, body {
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    
-
 }
 
 .notskew {
@@ -53,8 +56,16 @@ html, body {
 }
 
 .proj:hover {
-    padding-right: 10%;
+    padding-right: 20%;
 }
+
+/* .proj:hover + .name{
+    font-size: 5vw;
+}
+
+.proj:hover + .desc{
+    font-size: 1vw;
+} */
 
 #proj1 {
     background-color: #8f8f8f;
@@ -81,18 +92,21 @@ html, body {
     width: 50%;
     z-index: 2;
     bottom: 3px;
+    transition: width .5s ease;
 }
 
 .name{
     float: left;
     font-family: 'Raleway', sans-serif;
     color: ghostwhite;
-    font-size: 100px;
+    font-size: 10vw;
+    transition: font-size .5s ease;
 }
 
 .desc{
     float: left;
     font-family: 'Yellowtail', cursive;
     color: rgb(159, 125, 197);
-    font-size: 60px;
+    font-size: 4.5vw;    
+    transition: font-size .5s ease;
 }
