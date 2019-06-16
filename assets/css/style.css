@@ -17,20 +17,27 @@ html, body {
 }
 
 /* ----------TIMELINE CSS---------- */
-.fixed-to-bottom {
+
+.line{
+    position: absolute;
+    bottom: 22.5%;
+    border-bottom: 5px dotted aquamarine;
+    width: 100%;
+  }
+  
+  .fixed-to-bottom {
     position: absolute;
     bottom: 10%;
-    left: 10%;
-    right: 10%;
+    left: 5%;
+    right: 5%;
     height: auto;
     z-index: 2;
-}
-
-.timeline::-webkit-scrollbar {
-    display: none;
-}
-
-.timeline {
+    min-height: 20%;
+    width: auto;
+    overflow-x: auto;
+  }
+  
+  .timeline {
     position: relative;
     overflow-x: auto;
     background-repeat: repeat-x;
@@ -43,87 +50,97 @@ html, body {
     transition: height .2s ease-out;
     transition: height .2s ease-out;
     transition: height .2s ease-out;
-}
-
-/* .line{
-    position: absolute;
-    bottom: 50%;
-    background-image: linear-gradient(90deg, aquamarine 66%,transparent 0);
-    background-repeat: repeat-x;
-    widows: 100%;
-} */
-
-.line{
-    position: absolute;
-    bottom: 25%;
-    border-bottom: 5px dotted aquamarine;
-    width: 100%;
-}
-
-.timeline-item {
-    /* display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox; */
-    display:flex;
-    justify-content: space-between;
-    flex-flow:wrap;
-    -webkit-transition: max-width .2s,-webkit-transform .4s ease-out;
-    transition: max-width .2s,-webkit-transform .4s ease-out;
-    transition: max-width .2s,transform .4s ease-out;
-    transition: max-width .2s,transform .4s ease-out,-webkit-transform .4s ease-out;
-    cursor: pointer;
-    margin:0 50px; 
-    height:auto;
-}
-
-.p-timeline-item {
-    text-align: center;
-    padding: 30px 40px;
-    transition: max-width .2s,transform .4s ease-out;
-    width: 250px;
-}
-
-.p-timeline-date {
-    width: 100%;
-    font-weight:600;
-    font-size:20px;
-    color: white;
-    font-family: 'Raleway', sans-serif;
-}
-
-.p-timeline-carmodel {
-    display: block;
-    width: 100%;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    position: relative;
-    text-align: center;
-    color: white;
-    font-family: 'Damion', sans-serif;
-
-}
-
-.p-timeline-block {
-    display: block;
+  }
+  
+  .timeline::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .timeline-item-box {
+    display: inline-block;
+    /* position: absolute; */
+    height: 100%;
+    /* width: auto; */
+    margin: 0 50px;
+    /* white-space: nowrap; */
+  }
+  
+  .timeline-stone {
+    /* display: inline-block; */
+    /* position: absolute;
+    bottom: 30%;
+    right: 50%; */
     min-width:55px;
     min-height:55px;
     max-width:55px;
     max-height:55px;
     border: solid 0px black;
     border-radius:50%;
-    background-color: aquamarine;
-    /* top:3px;
-    left:48px; */
-    bottom: 25%;
-    margin: auto;
+    background-color: black;
+    margin: 0 auto;
     -webkit-transition: background-color .5s ease-in-out;
     transition: background-color .5s ease-in-out;
-}
+  }
+  
+  .timeline-item {
+    display: inline-block;
+    height: 100%;
+    width: auto;
+    padding: 0 50px;
+  }
+  
+  .timeline-item-info{
+    display: inline-block;
+    /* position: absolute; */
+    top: -100px;
+  }
+  
+  .timeline-title {
+    padding-bottom: 10px;
+    height: 50px;
+    width: 250px;
+    font-size:1.75vw;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700; 
+    text-align: center;
+    margin: 0;
+    text-shadow: 0px 0px 5px black;
+  }
+  
+  .timeline-org {
+    padding: 10px 0;
+    height: 40px;
+    font-size: 18px;
+    color: white;
+    font-family: 'Damion', sans-serif;
+    text-align: center;
+    margin: 0; 
+  }
 
-.p-timeline-item:hover{
+  @media screen and (min-width: 1200px) {
+    .timeline-title {
+        font-size: 20px;
+    }
+  }
+
+.timeline-item-box:hover {
     transform:scale(1.1); 
-    transition:transform .3s ease;}
+        transition:transform .3s ease;
+ }
 
+ .workfont {
+     color: goldenrod;
+ }
+
+ .schoolfont {
+     color: darkviolet;
+ }
+
+ .specprojfont {
+     color: green;
+ }
+ 
 .school:hover .p-timeline-block{background-color: darkviolet;}
 
 .work:hover .p-timeline-block{background-color: goldenrod;}
@@ -131,14 +148,14 @@ html, body {
 .specproj:hover .p-timeline-block{background-color: green;}
 
 .schoolpic {
-    content:url(../images/school.png)
+    content:url(../images/schoolinv.png)
 }
 
 .workpic {
-    content:url(../images/work.png)
+    content:url(../images/workinv.png)
 }
 
 .specprojpic {
-    content:url(../images/specproj.png)
+    content:url(../images/specprojinv.png)
 }
 

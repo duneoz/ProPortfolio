@@ -1,11 +1,23 @@
 /* ---- GOOGLE MAP ---- */
 
+//determine initialize zoom level
+var ifZoom = 0;
+
+if(screen.width > 1500) {
+    ifZoom = 3;
+    console.log("zoom should be 3")
+}
+else {
+    ifZoom = 2;
+    console.log("zoom should be 2")
+}
+
 //map variables
 const apiKey = "AIzaSyCHaaYyvWCZ5KvA9iutq2bVaXPqhNeGPUk";
 const apiLib = "&libraries=places";
 const latitude = 15;
 const longitude = -15;
-const initZoom = 3;
+const initZoom = ifZoom;
 
 //create a map
 function initMap() {
@@ -324,7 +336,7 @@ function setSpecprojMarker(map) {
 };
 
 $(document).ready(function () {
-    $(".p-timeline-item").hover(function(){
+    $(".timeline-item-box").hover(function(){
 
         console.log($(this).attr("id"));
 
