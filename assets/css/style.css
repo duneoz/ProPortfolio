@@ -63,6 +63,8 @@ html, body {
     /* width: auto; */
     margin: 0 50px;
     /* white-space: nowrap; */
+    
+    transition:transform .5s ease-in-out;
   }
   
   .timeline-stone {
@@ -79,7 +81,8 @@ html, body {
     background-color: black;
     margin: 0 auto;
     -webkit-transition: background-color .5s ease-in-out;
-    transition: background-color .5s ease-in-out;
+    transition: background-color .5s ease-in-out, transform .5s ease-in-out;
+    
   }
   
   .timeline-item {
@@ -93,6 +96,7 @@ html, body {
     display: inline-block;
     /* position: absolute; */
     top: -100px;
+    
   }
   
   .timeline-title {
@@ -106,6 +110,8 @@ html, body {
     text-align: center;
     margin: 0;
     text-shadow: 0px 0px 5px black;
+    
+    
   }
   
   .timeline-org {
@@ -116,6 +122,8 @@ html, body {
     font-family: 'Damion', sans-serif;
     text-align: center;
     margin: 0; 
+    
+    
   }
 
   @media screen and (min-width: 1200px) {
@@ -125,8 +133,7 @@ html, body {
   }
 
 .timeline-item-box:hover {
-    transform:scale(1.1); 
-        transition:transform .3s ease;
+    transform:scale(1.1);
  }
 
  .workfont {
@@ -141,11 +148,11 @@ html, body {
      color: green;
  }
  
-.school:hover .p-timeline-block{background-color: darkviolet;}
+.school:hover .timeline-stone{background-color: darkviolet;}
 
-.work:hover .p-timeline-block{background-color: goldenrod;}
+.work:hover .timeline-stone{background-color: goldenrod;}
 
-.specproj:hover .p-timeline-block{background-color: green;}
+.specproj:hover .timeline-stone{background-color: green;}
 
 .schoolpic {
     content:url(../images/schoolinv.png)

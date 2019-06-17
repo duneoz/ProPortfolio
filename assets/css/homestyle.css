@@ -128,3 +128,16 @@ p {
     font-size: 4vw;    
     transition: font-size .5s ease;
 }
+
+.hide {
+    transform: skewX(-10deg);
+    position: absolute;
+    left: -50%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+
+#proj5:hover .hide{
+    opacity: 1;
+}
