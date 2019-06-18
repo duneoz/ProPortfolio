@@ -129,7 +129,7 @@ p {
     transition: font-size .5s ease;
 }
 
-.hide {
+.hide1 {
     transform: skewX(-10deg);
     position: absolute;
     left: -50%;
@@ -138,6 +138,45 @@ p {
     transition: opacity 1s linear;
 }
 
-#proj5:hover .hide{
+.hide2 {
+    transform: skewX(-10deg);
+    position: absolute;
+    left: -50%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+
+.hide3 {
+    transform: skewX(-10deg);
+    position: absolute;
+    left: -50%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+
+.hide4 {
+    transform: skewX(-10deg);
+    position: absolute;
+    left: -50%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+
+#proj5:hover .hide1{
+    opacity: 1;
+}
+
+#proj4:hover .hide2{
+    opacity: 1;
+}
+
+#proj3:hover .hide3{
+    opacity: 1;
+}
+
+#proj2:hover .hide4{
     opacity: 1;
 }

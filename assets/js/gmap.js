@@ -3,7 +3,7 @@
 //determine initialize zoom level
 var ifZoom = 0;
 
-if(screen.width > 1500) {
+if (screen.width > 1500) {
     ifZoom = 3;
     console.log("zoom should be 3")
 }
@@ -248,106 +248,137 @@ function initMap() {
     setSchoolMarker(map);
     setSpecprojMarker(map);
 
-};
-
-//array variables for work, school, spec proj
-var work = [
-    ['Fort Worth, TX', 32.7555, -97.3308],
-    ['Amarillo, TX', 35.2220, -101.8313],
-    ['Augusta, GA', 33.4735, -82.0105],
-    ['Memphis, TN', 35.1495, -90.0490],
-    ['Providence, RI', 41.8240, -71.4128],
-    ['Wichita, KS', 37.6872, -97.3301],
-    ['Portland, OR', 45.5155, -122.6793]
-]
-
-var schools = [
-    ['University of Oregon', 45.5155, -122.6793],
-    ['Clemson University', 34.6834, -82.8374],
-    ['TCU', 32.7555, -97.3308]
-]
-
-var specprojs = [
-    ['Strategic Planning Retreat | Cabo San Lucas, Baja California Sur, Mexico', 22.8905, -109.9167],
-    ['Safety Audit | Yangjiang, Guangdong, China', 21.8580, 111.9822],
-    ['Energy Audit | Chihuahua City, Chihuahua, Mexico', 28.6330, -106.0691]
-]
-
-function setWorkMarker(map) {
-    var workIcon = {
-        url: '../assets/images/work.png',
-        size: new google.maps.Size(35, 31),
-    };
-
-
-    for (var i = 0; i < work.length; i++) {
-        var city = work[i];
-        var marker = new google.maps.Marker({
-            position: { lat: city[1], lng: city[2] },
-            map: map,
-            icon: workIcon,
-            title: city[0],
-            id: "work" + [i]
-        });
-
-        console.log(marker.id);
-    }
-    console.log("this fired");
-};
-
-function setSchoolMarker(map) {
-    var schoolIcon = {
-        url: '../assets/images/school.png',
-        size: new google.maps.Size(31, 31),
-    };
-
-    for (var i = 0; i < schools.length; i++) {
-        var school = schools[i];
-        var marker = new google.maps.Marker({
-            position: { lat: school[1], lng: school[2] },
-            map: map,
-            icon: schoolIcon,
-            title: school[0],
-            id: "school" + [i]
-        });
-
-        console.log(marker.id);
-    };
-};
-
-function setSpecprojMarker(map) {
-    var specprojIcon = {
-        url: '../assets/images/specproj.png',
-        size: new google.maps.Size(48, 48),
-    };
-
-    for (var i = 0; i < specprojs.length; i++) {
-        var specproj = specprojs[i];
-        var marker = new google.maps.Marker({
-            position: { lat: specproj[1], lng: specproj[2] },
-            map: map,
-            icon: specprojIcon,
-            title: specproj[0],
-            id: "specproj" + [i]
-        });
-
-        console.log(marker.id);
-    };
-};
-
-$(document).ready(function () {
-    $(".timeline-item-box").hover(function(){
-
-        console.log($(this).attr("id"));
-
-        var checkId = $(this).attr("id");
-
-        if (checkId === "item1") {
-            console.log("This is item1");
-            
+    // the smooth zoom function
+    function smoothZoom(map, max, cnt) {
+        if (cnt >= max) {
+            return;
         }
-    })
-});
+        else {
+            z = google.maps.event.addListener(map, 'zoom_changed', function (event) {
+                google.maps.event.removeListener(z);
+                smoothZoom(map, max, cnt + 1);
+            });
+            setTimeout(function () { map.setZoom(cnt) }, 250); // 80ms is what I found to work well on my system -- it might not work well on all systems
+        }
+    }
+
+        $(".timeline-item-box").hover(function () {
+
+            console.log($(this).attr("id"));
+
+            var checkId = $(this).attr("id");
+
+            if (checkId === "item1") {
+
+                console.log("This is item1");
+
+                //how far in to zoom
+                // map.setZoom(12);
+                smoothZoom(map, 12, map.getZoom());
+
+                //need to find the lat/long of marker with id = work1
+                map.setCenter({ lat: 32.7555, lng: -97.3308 });
+
+            }
+        })
+
+    };
+
+    //array variables for work, school, spec proj
+    var work = [
+        ['Fort Worth, TX', 32.7555, -97.3308],
+        ['Amarillo, TX', 35.2220, -101.8313],
+        ['Augusta, GA', 33.4735, -82.0105],
+        ['Memphis, TN', 35.1495, -90.0490],
+        ['Providence, RI', 41.8240, -71.4128],
+        ['Wichita, KS', 37.6872, -97.3301],
+        ['Portland, OR', 45.5155, -122.6793]
+    ]
+
+    var schools = [
+        ['University of Oregon', 45.5155, -122.6793],
+        ['Clemson University', 34.6834, -82.8374],
+        ['TCU', 32.7555, -97.3308]
+    ]
+
+    var specprojs = [
+        ['Strategic Planning Retreat | Cabo San Lucas, Baja California Sur, Mexico', 22.8905, -109.9167],
+        ['Safety Audit | Yangjiang, Guangdong, China', 21.8580, 111.9822],
+        ['Energy Audit | Chihuahua City, Chihuahua, Mexico', 28.6330, -106.0691]
+    ]
+
+    function setWorkMarker(map) {
+        var workIcon = {
+            url: '../assets/images/work.png',
+            size: new google.maps.Size(35, 31),
+        };
+
+
+        for (var i = 0; i < work.length; i++) {
+            var city = work[i];
+            var marker = new google.maps.Marker({
+                position: { lat: city[1], lng: city[2] },
+                map: map,
+                icon: workIcon,
+                title: city[0],
+                id: "work" + [i]
+            });
+
+            console.log(marker.id);
+        }
+        console.log("this fired");
+    };
+
+    function setSchoolMarker(map) {
+        var schoolIcon = {
+            url: '../assets/images/school.png',
+            size: new google.maps.Size(31, 31),
+        };
+
+        for (var i = 0; i < schools.length; i++) {
+            var school = schools[i];
+            var marker = new google.maps.Marker({
+                position: { lat: school[1], lng: school[2] },
+                map: map,
+                icon: schoolIcon,
+                title: school[0],
+                id: "school" + [i]
+            });
+
+            console.log(marker.id);
+        };
+    };
+
+    function setSpecprojMarker(map) {
+        var specprojIcon = {
+            url: '../assets/images/specproj.png',
+            size: new google.maps.Size(48, 48),
+        };
+
+        for (var i = 0; i < specprojs.length; i++) {
+            var specproj = specprojs[i];
+            var marker = new google.maps.Marker({
+                position: { lat: specproj[1], lng: specproj[2] },
+                map: map,
+                icon: specprojIcon,
+                title: specproj[0],
+                id: "specproj" + [i]
+            });
+
+            console.log(marker.id);
+        };
+    };
+
+    $(document).ready(function () {
+
+
+        // google.maps.event.addListener(marker, 'click', function*() {
+        //     map.setZoom(9);
+        //     map.setCenter(marker.getPosition(work.));
+        // });
+
+    });
+
 
 //     var specprojIcon = {
 //         url: 'assets/images/specproj.png',
