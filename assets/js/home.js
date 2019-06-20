@@ -1,4 +1,6 @@
 $(function() {
+
+ 
     $('.proj').hover(function() {
       $('.name').css('font-size', '5vw');
       $('.desc').css('font-size', '2vw');

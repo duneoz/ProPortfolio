@@ -262,6 +262,8 @@ function initMap() {
         }
     }
 
+    //add code here to zoom out if hover on map when zoom = 12
+
         $(".timeline-item-box").hover(function () {
 
             console.log($(this).attr("id"));

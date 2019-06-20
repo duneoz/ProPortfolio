@@ -71,7 +71,7 @@ p {
 
 #proj0 {
     background-color: #8f8f8f;
-    width: 10%;
+    width: 20%;
     height: 100vh;
     float: right;
     position: absolute;
@@ -179,4 +179,31 @@ p {
 
 #proj2:hover .hide4{
     opacity: 1;
+}
+
+
+@media screen and (max-width: 980px) {
+    .proj {
+      
+        /* height: calc(100vh - 2px); */
+        /* display: inline-block; */
+        transform: skewX(0deg);
+        /* border: 1px solid black; */
+       
+    }
+    
+    #proj0 {
+        width: 0;
+    }
+
+    #proj1 {
+        background-color: #7f7f7f;
+        z-index: 5;
+        margin-right: 0;
+    }
+
+    .proj:hover {
+        padding-right: 30%;
+    }
+
 }
