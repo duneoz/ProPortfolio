@@ -129,6 +129,24 @@ p {
     transition: font-size .5s ease;
 }
 
+.contact-info{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    transform: skewX(-10deg);
+    float: left;
+    font-family: 'Raleway', sans-serif;
+    color: ghostwhite;
+    font-size: 1.5vw;
+    transition: font-size .5s ease;
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+
+.lookgood{
+    margin: 20px;
+}
+
 .hide1 {
     transform: skewX(-10deg);
     position: absolute;
@@ -181,6 +199,9 @@ p {
     opacity: 1;
 }
 
+#proj1:hover .contact-info{
+    opacity: 1;
+}
 
 @media screen and (max-width: 980px) {
     .proj {
