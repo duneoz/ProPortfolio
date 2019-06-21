@@ -83,6 +83,21 @@ p {
     background-color: #7f7f7f;
     z-index: 5;
     margin-right: 5%;
+    height: 100vh;
+
+    transform: skewX(10deg);
+    width: 10%; 
+    float: right;
+    /* overflow: hidden; */
+    /* margin: 10%; */
+    padding: 0;
+    transition: padding .5s ease, box-shadow 1s ease;
+    /* text-align: left;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start; */
+    /* box-shadow: -2px 0 15px -5px black  ; */
+    position: relative;
 }
 
 #proj2 {
@@ -129,22 +144,40 @@ p {
     transition: font-size .5s ease;
 }
 
-.contact-info{
+/* .contact-info{
     position: absolute;
     top: 10px;
-    left: 20px;
+    left: 0px;
     transform: skewX(-10deg);
-    float: left;
-    font-family: 'Raleway', sans-serif;
-    color: ghostwhite;
-    font-size: 1.5vw;
-    transition: font-size .5s ease;
+    opacity: 0;
+    transition: opacity 1s linear;
+} */
+
+.lookgood{
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    transform: skewX(-10deg);
     opacity: 0;
     transition: opacity 1s linear;
 }
 
-.lookgood{
-    margin: 20px;
+.lookgood1{
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    transform: skewX(-10deg);
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+
+.lookgood2{
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    transform: skewX(-10deg);
+    opacity: 0;
+    transition: opacity 1s linear;
 }
 
 .hide1 {
@@ -199,7 +232,15 @@ p {
     opacity: 1;
 }
 
-#proj1:hover .contact-info{
+#proj1:hover .lookgood{
+    opacity: 1;
+}
+
+#proj1:hover .lookgood1{
+    opacity: 1;
+}
+
+#proj1:hover .lookgood2{
     opacity: 1;
 }
 
@@ -221,10 +262,18 @@ p {
         background-color: #7f7f7f;
         z-index: 5;
         margin-right: 0;
+        transform: skewX(0deg);
     }
 
     .proj:hover {
         padding-right: 30%;
     }
 
+    .lookgood, .lookgood1, .lookgood2{
+       
+        transform: skewX(0deg);
+        left: 10%;
+        
+    
+    }
 }
