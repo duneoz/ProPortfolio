@@ -1,3 +1,5 @@
+console.log("is this loading")
+
 //set up global variables for all functions to use
 var item = '.timeline-item';
 var content = '.p-timeline-content';
@@ -56,16 +58,21 @@ function closeCurrentContent(event){
 }
 
 
-$(function() {
+// $(function() {
 
-  $("body").mousewheel(function(event, delta) {
+// $(document).ready(
 
-     this.scrollLeft -= (delta * 30);
+//   $("body").mousewheel(function(event, delta) {
+
+//      $(".fixed-to-bottom").scrollLeft -= (delta * 100);
    
-     event.preventDefault();
+//      console.log("I'm hearing the scroll!")
+//     //  event.preventDefault();
 
-  }, {
-    passive: false
-  });
+//   }, {
+//     passive: false
+//   });
 
-});
+//   )
+// // });
+

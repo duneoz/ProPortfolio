@@ -18,3 +18,5 @@ $(function() {
       $('.proj').css('box-shadow','-2px 0 15px -5px black');
     })
   })
+
+ 
