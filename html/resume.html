@@ -13,184 +13,254 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
     <!-- Raleway + Damion Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Damion|Raleway:100,700|Yellowtail&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Damion|Raleway:100,700|Yellowtail&display=swap"
+        rel="stylesheet">
 
 </head>
 
 <body>
 
-    <div class="overlay" onClick="style.pointerEvents='none'"></div>
+    <!-- <div class="overlay" onClick="style.pointerEvents='none'"></div> -->
+
+    <div class="overlay"></div>
 
     <!-- MAP -->
     <div id="map"></div>
 
+
+
     <!-- TIMELINE -->
     <div class="fixed-to-bottom">
+
+        <!-- CHECK LINE FOR INTERACTIVE TIMELINE ELEMENTS -->
+        <div id="line"></div>
+
+        <div id="hilight"></div>
+
         <div class="line"></div>
 
         <div class="timeline" id="scrollHoriz">
 
+
+            <div class="timeline-item-box work">
+                <div class="timeline-item-info">
+                    <p class="timeline-leadIn workfont"></p>
+                    <p class="timeline-org"></p>
+                </div>
+            </div>
+
+            <div class="timeline-item-box work">
+                <div class="timeline-item-info">
+                    <p class="year">2008</p>
+                </div>
+            </div>
+
             <div id="item1" class="timeline-item-box work">
                 <div class="timeline-item-info">
-                    <p class="timeline-title workfont">Severance Tax Accounting Intern</p>
+                    <p id="pitem1" class="timeline-title workfont">Severance Tax Accounting Intern</p>
                     <p class="timeline-org">XTO Energy, Inc.</p>
-                    <div class="timeline-stone workpic"></div>
+                    <div id="stone1" class="timeline-stone workpic"></div>
+                </div>
+            </div>
+
+            <div class="timeline-item-box work">
+                <div class="timeline-item-info">
+                    <p class="year">2010</p>
                 </div>
             </div>
 
 
             <div id="item2" class="timeline-item-box work">
                 <div class="timeline-item-info">
-                    <p class="timeline-title workfont">TCU Supply Chain Student Executive
+                    <p id="pitem2" class="timeline-title workfont">TCU Supply Chain Student Executive
                         Intern</p>
                     <p class="timeline-org">Alcon Labs</p>
-                    <div class="timeline-stone workpic"></div>
+                    <div id="stone2" class="timeline-stone workpic"></div>
                 </div>
             </div>
 
+            <div class="timeline-item-box work">
+                <div class="timeline-item-info">
+                    <p class="year">2011</p>
+                </div>
+            </div>
 
             <div id="item3" class="timeline-item-box school">
                 <div class="timeline-item-info">
-                    <p class="timeline-title schoolfont">Bachelor of Business Administration</p>
+                    <p id="pitem3" class="timeline-title schoolfont">Bachelor of Business Administration</p>
                     <p class="timeline-org">TCU Neeley School of Business</p>
-                    <div class="timeline-stone schoolpic"></div>
+                    <div id="stone3" class="timeline-stone schoolpic"></div>
                 </div>
             </div>
 
 
             <div id="item4" class="timeline-item-box work">
-                    <div class="timeline-item-info">
-                        <p class="timeline-title workfont">Leadership Development Program</p>
-                        <p class="timeline-org">Textron, Inc.</p>
-                        <div class="timeline-stone workpic"></div>
-                    </div>
+                <div class="timeline-item-info">
+                    <p id="pitem4" class="timeline-title workfont">Leadership Development Program</p>
+                    <p class="timeline-org">Textron, Inc.</p>
+                    <div id="stone4" class="timeline-stone workpic"></div>
                 </div>
+            </div>
 
 
             <div id="item5" class="timeline-item-box work">
                 <div class="timeline-item-info">
-                    <p class="timeline-title workfont">Safety Process Leader</p>
+                    <p id="pitem5" class="timeline-title workfont">Safety Process Leader</p>
                     <p class="timeline-org">Cessna Aircraft</p>
-                    <div class="timeline-stone workpic"></div>
+                    <div id="stone5" class="timeline-stone workpic"></div>
                 </div>
             </div>
 
 
             <div id="item6" class="timeline-item-box work">
                 <div class="timeline-item-info">
-                    <p class="timeline-title workfont">Supplier Development Specialist</p>
+                    <p id="pitem6" class="timeline-title workfont">Supplier Development Specialist</p>
                     <p class="timeline-org">Bell Helicopter</p>
-                    <div class="timeline-stone workpic"></div>
+                    <div id="stone6" class="timeline-stone workpic"></div>
                 </div>
             </div>
 
+            <div class="timeline-item-box work">
+                <div class="timeline-item-info">
+                    <p class="year">2012</p>
+                </div>
+            </div>
 
             <div id="item7" class="timeline-item-box work">
                 <div class="timeline-item-info">
-                    <p class="timeline-title workfont">Buyer/Planner</p>
+                    <p id="pitem7" class="timeline-title workfont">Buyer/Planner</p>
                     <p class="timeline-org">E-Z-GO</p>
-                    <div class="timeline-stone workpic"></div>
+                    <div id="stone7" class="timeline-stone workpic"></div>
                 </div>
             </div>
 
 
             <div id="item8" class="timeline-item-box work">
                 <div class="timeline-item-info">
-                    <p class="timeline-title workfont">Operations Supervisor</p>
+                    <p id="pitem8" class="timeline-title workfont">Operations Supervisor</p>
                     <p class="timeline-org">Greenlee</p>
-                    <div class="timeline-stone workpic"></div>
+                    <div id="stone8" class="timeline-stone workpic"></div>
                 </div>
             </div>
 
+            <div class="timeline-item-box work">
+                <div class="timeline-item-info">
+                    <p class="year">2013</p>
+                </div>
+            </div>
 
             <div id="item9" class="timeline-item-box work">
                 <div class="timeline-item-info workfont">
-                    <p class="timeline-title workfont">EHS Continuous Improvement Leader</p>
+                    <p id="pitem9" class="timeline-title workfont">EHS Continuous Improvement Leader</p>
                     <p class="timeline-org">Textron Aviation</p>
-                    <div class="timeline-stone workpic"></div>
+                    <div id="stone9" class="timeline-stone workpic"></div>
                 </div>
             </div>
 
 
             <div id="item10" class="timeline-item-box specproj">
                 <div class="timeline-item-info">
-                    <p class="timeline-title specprojfont">Energy Audit</p>
+                    <p id="pitem10" class="timeline-title specprojfont">Energy Audit</p>
                     <p class="timeline-org">Chihuahua City, Chihuahua, Mexico</p>
-                    <div class="timeline-stone specprojpic"></div>
+                    <div id="stone10" class="timeline-stone specprojpic"></div>
                 </div>
             </div>
-
+            
+            <div class="timeline-item-box work">
+                <div class="timeline-item-info">
+                    <p class="year">2015</p>
+                </div>
+            </div>
 
             <div id="item11" class="timeline-item-box work">
                 <div class="timeline-item-info">
-                    <p class="timeline-title workfont">EHS Engineer</p>
+                    <p id="pitem11" class="timeline-title workfont">EHS Engineer</p>
                     <p class="timeline-org">Textron Aviation</p>
-                    <div class="timeline-stone workpic"></div>
+                    <div id="stone11" class="timeline-stone workpic"></div>
                 </div>
             </div>
 
+            
 
             <div id="item12" class="timeline-item-box work">
                 <div class="timeline-item-info">
-                    <p class="timeline-title workfont">Safety Engineer</p>
+                    <p id="pitem12" class="timeline-title workfont">Safety Engineer</p>
                     <p class="timeline-org">Leatherman Tool Group</p>
-                    <div class="timeline-stone workpic"></div>
+                    <div id="stone12" class="timeline-stone workpic"></div>
                 </div>
             </div>
 
 
             <div id="item13" class="timeline-item-box specproj">
                 <div class="timeline-item-info">
-                    <p class="timeline-title workfont">Safety Audit</p>
+                    <p id="pitem13" class="timeline-title workfont">Safety Audit</p>
                     <p class="timeline-org">Yangjiang, Guangdong, China</p>
-                    <div class="timeline-stone specprojpic"></div>
+                    <div id="stone13" class="timeline-stone specprojpic"></div>
                 </div>
             </div>
 
 
             <div id="item14" class="timeline-item-box work">
                 <div class="timeline-item-info">
-                    <p class="timeline-title workfont">EHS Leader</p>
+                    <p id="pitem14" class="timeline-title workfont">EHS Leader</p>
                     <p class="timeline-org">Leatherman Tool Group</p>
-                    <div class="timeline-stone workpic"></div>
+                    <div id="stone14" class="timeline-stone workpic"></div>
                 </div>
             </div>
 
+            <div class="timeline-item-box work">
+                <div class="timeline-item-info">
+                    <p class="year">2017</p>
+                </div>
+            </div>
 
             <div id="item15" class="timeline-item-box school">
                 <div class="timeline-item-info">
-                    <p class="timeline-title schoolfont">Master of Engineering Industrial Engineering</p>
+                    <p id="pitem15" class="timeline-title schoolfont">Master of Engineering Industrial Engineering</p>
                     <p class="timeline-org">Clemson University</p>
-                    <div class="timeline-stone schoolpic"></div>
+                    <div id="stone15" class="timeline-stone schoolpic"></div>
                 </div>
             </div>
 
 
             <div id="item16" class="timeline-item-box work">
                 <div class="timeline-item-info">
-                    <p class="timeline-title workfont">Project Manager</p>
+                    <p id="pitem16" class="timeline-title workfont">Project Manager</p>
                     <p class="timeline-org">Leatherman Tool Group</p>
-                    <div class="timeline-stone workpic"></div>
+                    <div id="stone16" class="timeline-stone workpic"></div>
                 </div>
             </div>
 
+            <div class="timeline-item-box work">
+                <div class="timeline-item-info">
+                    <p class="year">2019</p>
+                </div>
+            </div>
 
             <div id="item17" class="timeline-item-box specproj">
                 <div class="timeline-item-info">
-                    <p class="timeline-title specprojfont">Strategic Planning Retreat</p>
+                    <p id="pitem17" class="timeline-title specprojfont">Strategic Planning Retreat</p>
                     <p class="timeline-org">Cabo San Lucas, Baja California Sur, Mexico</p>
-                    <div class="timeline-stone specprojpic"></div>
+                    <div id="stone17" class="timeline-stone specprojpic"></div>
                 </div>
             </div>
 
 
             <div id="item18" class="timeline-item-box school">
                 <div class="timeline-item-info">
-                    <p class="timeline-title schoolfont">Full Stack Development Program</p>
+                    <p id="pitem18" class="timeline-title schoolfont">Full Stack Development Program</p>
                     <p class="timeline-org">University of Oregon</p>
-                    <div class="timeline-stone schoolpic"></div>
+                    <div id="stone18" class="timeline-stone schoolpic"></div>
                 </div>
             </div>
+
+            <div class="timeline-item-box work">
+                    <div class="timeline-item-info">
+                        <p class="timeline-leadIn workfont"></p>
+                        <p class="timeline-org"></p>
+                    </div>
+                </div>
+    
 
         </div>
 
@@ -213,7 +283,8 @@
         </ul>
     </div> -->
     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHaaYyvWCZ5KvA9iutq2bVaXPqhNeGPUk&callback=initMap"></script> -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHaaYyvWCZ5KvA9iutq2bVaXPqhNeGPUk&callback=initMap"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHaaYyvWCZ5KvA9iutq2bVaXPqhNeGPUk&callback=initMap"></script>
     <script type="text/javascript" src="../assets/js/gmap.js"></script>
 
     <!-- <script type="text/javascript" src="../assets/js/divline.js"></script> -->

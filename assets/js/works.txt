@@ -1,0 +1,28 @@
+function checkPosition() {
+    var line = document.getElementById("line");
+    var itemOne = document.getElementById("item1");
+    var itemTwo = document.getElementById("item2");
+    
+
+    var lineRight = Math.round(line.getBoundingClientRect().right);
+    var lineLeft = Math.round(line.getBoundingClientRect().left);
+    var itemOneLeft = Math.round(itemOne.getBoundingClientRect().left);
+    var itemOneRight = Math.round(itemOne.getBoundingClientRect().right);
+    var itemTwoLeft = Math.round(itemTwo.getBoundingClientRect().left);
+    var itemTwoRight = Math.round(itemTwo.getBoundingClientRect().right);
+
+
+    if (itemOneLeft < lineRight && itemOneRight > lineLeft) {
+        // console.log("item1");
+
+        //code here to set the varListenForMeToChange.a value
+        varListenForMeToChange.a = "item1";
+    }
+
+    if (itemTwoLeft < lineRight && itemTwoRight > lineLeft) {
+        // console.log("item1");
+
+        //code here to set the varListenForMeToChange.a value      
+        varListenForMeToChange.a = "item2";
+    }
+}
