@@ -348,10 +348,6 @@ function setSpecprojMarker(map) {
     };
 };
 
-
-
-window.addEventListener('wheel', checkPosition)
-
 var checkIt = "";
 
 var arrItems = ["item1", "item2", "item3", "item4", "item5", "item6", "item7", "item8", "item9", "item10", "item11", "item12", "item13", "item14", "item15", "item16", "item17", "item18"];
@@ -556,6 +552,20 @@ var resElements = [{
 },
 ];
 
+var timer = null;
+
+                        window.addEventListener('wheel', function () {
+                            if (timer !== null) {
+                                this.clearTimeout(timer);
+                            }
+                            timer = this.setTimeout(function () {
+                                console.log("not scrolling")
+                                delayZooms();
+                            }, 500);
+                        }, false);
+
+window.addEventListener('wheel', checkPosition)
+
 
 
 
@@ -673,35 +683,33 @@ varListenForMeToChange.registerListener(function (val) {
 
                     // console log lat,long
                     console.log(resElements[i].cityLat + ", " + resElements[i].cityLon);
-
-                    //add another if here to check if scroll is negative or positive, if negative compare i+1 instead of i-1 and then run some code
-                    if (i - 1 < 0) {
-                        map.setCenter(new google.maps.LatLng(resElements[i].cityLat, resElements[i].cityLon));
-                        delayIn();
-                    }
-                    else if (resElements[i].cityLat === resElements[i - 1].cityLat && resElements[i].cityLon === resElements[i - 1].cityLon) {
-
-                    } else {
-                        var timer = null;
-
-                        window.addEventListener('wheel', function () {
-                            if (timer !== null) {
-                                this.clearTimeout(timer);
-                            }
-                            timer = this.setTimeout(function () {
-                                console.log("not scrolling")
-                                delayZooms();
-                            }, 500);
-                        }, false);
-
-                    };
                 };
             };
         }
     }
-
-
 });
+
+//add another if here to check if scroll is negative or positive, if negative compare i+1 instead of i-1 and then run some code
+                    // if (i - 1 < 0) {
+                    //     map.setCenter(new google.maps.LatLng(resElements[i].cityLat, resElements[i].cityLon));
+                    //     delayIn();
+                    // }
+                    // else if (resElements[i].cityLat === resElements[i - 1].cityLat && resElements[i].cityLon === resElements[i - 1].cityLon) {
+
+                    // } else {
+                    //     var timer = null;
+
+                    //     window.addEventListener('wheel', function () {
+                    //         if (timer !== null) {
+                    //             this.clearTimeout(timer);
+                    //         }
+                    //         timer = this.setTimeout(function () {
+                    //             console.log("not scrolling")
+                    //             delayZooms();
+                    //         }, 500);
+                    //     }, false);
+
+                    // };
 
 function delayZooms() {
 
