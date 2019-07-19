@@ -1,22 +1,18 @@
+//scroll right/left on wheel up/down
 window.addEventListener("wheel", event => {
     const delta = Math.sign(event.deltaY);
     console.info(delta);
 
     var elem = document.getElementById("scrollHoriz");
-    elem.scrollBy(delta * 50, 0);
+    elem.scrollBy(delta * 25, 0);
 });
 
 
-//possibly use anchors to scroll
-
-//set up variable to help control the scroll with a certain feedback
-//another way to do this is css transition
-
-/* ---- GOOGLE MAP ---- */
-
-//determine initialize zoom level
+//declare ifZoom variable
 var ifZoom = 0;
 
+//determine what ifZoom should be set to based on screen width
+//this should maybe be set to some other variable like viewport width
 if (screen.width > 1500) {
     ifZoom = 3;
     console.log("zoom should be 3")
@@ -33,9 +29,11 @@ const latitude = 15;
 const longitude = -15;
 const initZoom = ifZoom;
 
+var map;
+
 //create a map
 function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: latitude, lng: longitude },
         zoom: initZoom,
         mapTypeControl: false,
@@ -258,105 +256,10 @@ function initMap() {
         ]
     })
 
+    //run the functions to set map markers
     setWorkMarker(map);
     setSchoolMarker(map);
     setSpecprojMarker(map);
-
-    // the smooth zoom function
-    // function smoothZoom(map, max, cnt) {
-    //     if (cnt >= max) {
-    //         return;
-    //     }
-    //     else {
-    //         z = google.maps.event.addListener(map, 'zoom_changed', function (event) {
-    //             google.maps.event.removeListener(z);
-    //             smoothZoom(map, max, cnt + 1);
-    //         });
-    //         setTimeout(function () { map.setZoom(cnt) }, 250); 
-    //     }
-    // }
-
-    var compZoom = 0;
-
-    //delaying the zoom
-    function delay1() {
-        setTimeout(function () { map.setZoom(6); }, 500);
-
-    };
-
-    function delay2() {
-        setTimeout(function () { map.setZoom(9); }, 1000);
-    };
-
-    function delay3() {
-        setTimeout(function () { map.setZoom(12); }, 1750);
-        compZoom = 12;
-    };
-
-    function delay4() {
-        setTimeout(function () { map.setZoom(9); }, 500);
-
-    };
-
-    function delay5() {
-        setTimeout(function () { map.setZoom(6); }, 1000);
-    };
-
-    function delay6() {
-        setTimeout(function () { map.setZoom(ifZoom); }, 1750);
-
-    };
-
-    $(".timeline-item-box").hover(
-
-        function () {
-            //log the id to know
-            console.log($(this).attr("id"));
-            //set checkId variable
-            var checkId = $(this).attr("id");
-            //see if id is item1, zoom in to location
-            if (checkId === "item1") {
-                //confirming this is item1
-                console.log("This is item1");
-                //need to find the lat/long of marker with id = work1
-                map.setCenter({ lat: 32.7555, lng: -97.3308 });
-
-                
-
-                //calling the delayed zoom
-                delay1();
-                delay2();
-                delay3();
-                //how far in to zoom
-                // map.setZoom(12);
-
-
-                // map.setZoom(12)
-                // smoothZoom(map, 12, map.getZoom());
-                // checkId = "";
-            }
-
-
-        }, function () {
-            // map.setZoom(ifZoom);
-            if (compZoom === 12) {
-            
-                delay4();
-                delay5();
-                delay6();
-
-                compZoom = 0;
-            }
-        });
-
-    // $(".overlay").hover(function () {
-    //     console.log("on the map now");
-
-
-    //     map.setZoom(ifZoom);
-
-    //     // smoothZoom(map, ifZoom, map.getZoom());
-    // });
 
 };
 
@@ -445,35 +348,407 @@ function setSpecprojMarker(map) {
     };
 };
 
-$(document).ready(function () {
+var checkIt = "";
+
+var arrItems = ["item1", "item2", "item3", "item4", "item5", "item6", "item7", "item8", "item9", "item10", "item11", "item12", "item13", "item14", "item15", "item16", "item17", "item18"];
+
+var resElements = [{
+    elementID: "item1",
+    elemPara: "pitem1",
+    elemStone: "stone1",
+    city: "Fort Worth, TX",
+    cityLat: 32.7555,
+    cityLon: -97.3308,
+    locationType: "work",
+    fontType: "workItemfont",
+    stoneType: "workStone"
+},
+{
+    elementID: "item2",
+    elemPara: "pitem2",
+    elemStone: "stone2",
+    city: "Fort Worth, TX",
+    cityLat: 32.7555,
+    cityLon: -97.3308,
+    locationType: "work",
+    fontType: "workItemfont",
+    stoneType: "workStone"
+},
+{
+    elementID: "item3",
+    elemPara: "pitem3",
+    elemStone: "stone3",
+    city: "Fort Worth, TX",
+    cityLat: 32.7555,
+    cityLon: -97.3308,
+    locationType: "school",
+    fontType: "schoolItemfont",
+    stoneType: "schoolStone"
+},
+{
+    elementID: "item4",
+    elemPara: "pitem4",
+    elemStone: "stone4",
+    city: 'Providence, RI',
+    cityLat: 41.8240,
+    cityLon: -71.4128,
+    locationType: "work",
+    fontType: "workItemfont",
+    stoneType: "workStone"
+},
+{
+    elementID: "item5",
+    elemPara: "pitem5",
+    elemStone: "stone5",
+    city: 'Wichita, KS',
+    cityLat: 37.6872,
+    cityLon: -97.3301,
+    locationType: "work",
+    fontType: "workItemfont",
+    stoneType: "workStone"
+},
+{
+    elementID: "item6",
+    elemPara: "pitem6",
+    elemStone: "stone6",
+    city: 'Amarillo, TX',
+    cityLat: 35.2220,
+    cityLon: -101.8313,
+    locationType: "work",
+    fontType: "workItemfont",
+    stoneType: "workStone"
+},
+{
+    elementID: "item7",
+    elemPara: "pitem7",
+    elemStone: "stone7",
+    city: 'Augusta, GA',
+    cityLat: 33.4735,
+    cityLon: -82.0105,
+    locationType: "work",
+    fontType: "workItemfont",
+    stoneType: "workStone"
+},
+{
+    elementID: "item8",
+    elemPara: "pitem8",
+    elemStone: "stone8",
+    city: 'Memphis, TN',
+    cityLat: 35.1495,
+    cityLon: -90.0490,
+    locationType: "work",
+    fontType: "workItemfont",
+    stoneType: "workStone"
+},
+{
+    elementID: "item9",
+    elemPara: "pitem9",
+    elemStone: "stone9",
+    city: 'Wichita, KS',
+    cityLat: 37.6872,
+    cityLon: -97.3301,
+    locationType: "work",
+    fontType: "workItemfont",
+    stoneType: "workStone"
+},
+{
+    elementID: "item10",
+    elemPara: "pitem10",
+    elemStone: "stone10",
+    city: 'Chihuahua City, Chihuahua, Mexico',
+    cityLat: 28.6330,
+    cityLon: -106.0691,
+    locationType: "specproj",
+    fontType: "specprojItemfont",
+    stoneType: "specprojStone"
+},
+{
+    elementID: "item11",
+    elemPara: "pitem11",
+    elemStone: "stone11",
+    city: 'Wichita, KS',
+    cityLat: 37.6872,
+    cityLon: -97.3301,
+    locationType: "work",
+    fontType: "workItemfont",
+    stoneType: "workStone"
+},
+{
+    elementID: "item12",
+    elemPara: "pitem12",
+    elemStone: "stone12",
+    city: 'Portland, OR',
+    cityLat: 45.5155,
+    cityLon: -122.6793,
+    locationType: "work",
+    fontType: "workItemfont",
+    stoneType: "workStone"
+},
+{
+    elementID: "item13",
+    elemPara: "pitem13",
+    elemStone: "stone13",
+    city: 'Yangjiang, Guangdong, China',
+    cityLat: 21.8580,
+    cityLon: 111.9822,
+    locationType: "specproj",
+    fontType: "specprojItemfont",
+    stoneType: "specprojStone"
+},
+{
+    elementID: "item14",
+    elemPara: "pitem14",
+    elemStone: "stone14",
+    city: 'Portland, OR',
+    cityLat: 45.5155,
+    cityLon: -122.6793,
+    locationType: "work",
+    fontType: "workItemfont",
+    stoneType: "workStone"
+},
+{
+    elementID: "item15",
+    elemPara: "pitem15",
+    elemStone: "stone15",
+    city: 'Clemson, SC',
+    cityLat: 34.6834,
+    cityLon: -82.8374,
+    locationType: "school",
+    fontType: "schoolItemfont",
+    stoneType: "schoolStone"
+},
+{
+    elementID: "item16",
+    elemPara: "pitem16",
+    elemStone: "stone16",
+    city: 'Portland, OR',
+    cityLat: 45.5155,
+    cityLon: -122.6793,
+    locationType: "work",
+    fontType: "workItemfont",
+    stoneType: "workStone"
+},
+{
+    elementID: "item17",
+    elemPara: "pitem17",
+    elemStone: "stone17",
+    city: 'Cabo San Lucas, Baja California Sur, Mexico',
+    cityLat: 22.8905,
+    cityLon: -109.9167,
+    locationType: "specproj",
+    fontType: "specprojItemfont",
+    stoneType: "specprojStone"
+},
+{
+    elementID: "item18",
+    elemPara: "pitem18",
+    elemStone: "stone18",
+    city: 'Portland, OR',
+    cityLat: 45.5155,
+    cityLon: -122.6793,
+    locationType: "school",
+    fontType: "schoolItemfont",
+    stoneType: "schoolStone"
+},
+];
+
+var timer = null;
+
+//wheel event to that runs the function if the wheel has stopped moving for xxx ms
+window.addEventListener('wheel', function () {
+    if (timer !== null) {
+        this.clearTimeout(timer);
+    }
+    timer = this.setTimeout(function () {
+        console.log("not scrolling");
+        doTheZoom();
+    }, 500);
+}, false);
+
+var variable1;
+var variablelat;
+var variablelon;
+var howlongcenter;
+var howlongin;
+
+function doTheZoom() {
+
+    //if the variable === the array[i].itemID && 
+    var lineRight2 = Math.round(line.getBoundingClientRect().right);
+    var lineLeft2 = Math.round(line.getBoundingClientRect().left);
+
+    for (var i = 0; i < resElements.length; i++) {
+        var itemID2 = document.getElementById(resElements[i].elementID);
+        var itemLeft2 = Math.round(itemID2.getBoundingClientRect().left);
+        var itemRight2 = Math.round(itemID2.getBoundingClientRect().right);
+
+        if (itemLeft2 < lineRight2 && itemRight2 > lineLeft2) {
+
+            if (variable1 === resElements[i].elementID) {
+                console.log("varialbe 1 didnt change")
+
+            } else if (variablelat === resElements[i].cityLat && variablelon === resElements[i].cityLon) {
+            } else {
+                variable1 = resElements[i].elementID;
+                variablelat = resElements[i].cityLat;
+                variablelon = resElements[i].cityLon;
+                console.log("variable 1 changed");
+                // isNew = "true";
+                var lat = resElements[i].cityLat;
+                var lon = resElements[i].cityLon;
+                if (compZoom === 12) {
+                    delayOut();
+                    howlongcenter = 2000;
+                    howlongin = 2500;
+                }
+
+                setTimeout(function () { map.setCenter(new google.maps.LatLng(lat, lon)) }, howlongcenter);
+                setTimeout(function () { delayIn(); }, howlongin);
+
+            }
+        }
+
+    }
+}
+
+window.addEventListener('wheel', checkPosition)
+
+function checkPosition() {
+    var lineRight = Math.round(line.getBoundingClientRect().right);
+    var lineLeft = Math.round(line.getBoundingClientRect().left);
+
+    for (var i = 0; i < arrItems.length; i++) {
+        var itemID = document.getElementById(arrItems[i]);
+        var itemLeft = Math.round(itemID.getBoundingClientRect().left);
+        var itemRight = Math.round(itemID.getBoundingClientRect().right);
+
+        if (itemLeft < lineRight && itemRight > lineLeft) {
+
+            if (varListenForMeToChange.a === arrItems[i]) {
+                console.log("NO CHANGE TO varListenForMeToChange")
+
+            } else {
+                // need to create a couple variables and an if statement that compares their value, if they are different change the listening variable and set the variables to equal
+                varListenForMeToChange.a = arrItems[i];
+                console.log("varListenForMeToChange has changed");
+                // isNew = "true";
+            }
+        }
+    }
+
+}
+
+varListenForMeToChange = {
+    aInternal: 10,
+    aListener: function (val) { },
+    set a(val) {
+        this.aInternal = val;
+        this.aListener(val);
+    },
+    get a() {
+        return this.aInternal;
+    },
+    registerListener: function (listener) {
+        this.aListener = listener;
+    }
+}
+
+//declare the compZoom variable 
+var compZoom = 0;
+
+//delaying the zoom in, set compZoom
+function delayIn() {
+    setTimeout(function () { map.setZoom(3); }, 250);
+    setTimeout(function () { map.setZoom(4); }, 500);
+    setTimeout(function () { map.setZoom(5); }, 750);
+    setTimeout(function () { map.setZoom(6); }, 1000);
+    setTimeout(function () { map.setZoom(7); }, 1250);
+    setTimeout(function () { map.setZoom(8); }, 1500);
+    setTimeout(function () { map.setZoom(9); }, 1750);
+    setTimeout(function () { map.setZoom(10); }, 2000);
+    setTimeout(function () { map.setZoom(11); }, 2250);
+    setTimeout(function () { map.setZoom(12); }, 2500);
+    compZoom = 12
+
+}
 
 
-    // google.maps.event.addListener(marker, 'click', function*() {
-    //     map.setZoom(9);
-    //     map.setCenter(marker.getPosition(work.));
-    // });
+//delaying the zoom out
+function delayOut() {
+    setTimeout(function () { map.setZoom(11); }, 250);
+    setTimeout(function () { map.setZoom(10); }, 500);
+    setTimeout(function () { map.setZoom(9); }, 750);
+    setTimeout(function () { map.setZoom(8); }, 1000);
+    setTimeout(function () { map.setZoom(7); }, 1250);
+    setTimeout(function () { map.setZoom(6); }, 1500);
+    // setTimeout(function () { map.setZoom(5); }, 1750);
+    // setTimeout(function () { map.setZoom(4); }, 2250);
+    // setTimeout(function () { map.setZoom(3); }, 2750);
+    setTimeout(function () { map.setZoom(ifZoom); }, 1750);
+    compZoom = ifZoom;
+}
+
+//need to write an if statement that waits 5 ms to run the code below, does nothing if another scroll has happened
+
+//need to write some code that scrolls timeline to next stone and centers then stops unless scrolling it still happening
+
+varListenForMeToChange.registerListener(function (val) {
+
+    if (checkIt === varListenForMeToChange.a) {
+
+    } else {
+
+        if (checkIt === "") {
+
+        } else {
+
+            document.getElementById(checkIt).classList.remove('divScope');
+
+            //remove color: loop through the resElements object array
+            for (var i = 0; i < resElements.length; i++) {
+
+                // if resElement.elementID equals focused itemID remove fontType and stoneType property from object array to class list
+                if (resElements[i].elementID === checkIt) {
+                    document.getElementById(resElements[i].elemPara).classList.remove(resElements[i].fontType);
+                    document.getElementById(resElements[i].elemStone).classList.remove(resElements[i].stoneType);
+                };
+            };
+        }
+
+        checkIt = varListenForMeToChange.a;
+        console.log("varListen = " + varListenForMeToChange.a);
+        console.log("checkIt = " + checkIt);
+
+
+        var varWhichItem = document.getElementById(varListenForMeToChange.a);
+
+        if (checkIt === "") {
+
+        } else {
+            varWhichItem.classList.add('divScope');
+
+            //add color: loop through the resElements object array
+            for (var i = 0; i < resElements.length; i++) {
+
+                // if resElement.elementID equals focused itemID add fontType and stoneType property from object array to class list
+                if (resElements[i].elementID === checkIt) {
+                    document.getElementById(resElements[i].elemPara).classList.add(resElements[i].fontType);
+                    document.getElementById(resElements[i].elemStone).classList.add(resElements[i].stoneType);
+
+                    // console log lat,long
+                    console.log(resElements[i].cityLat + ", " + resElements[i].cityLon);
+                };
+            };
+        }
+
+    }
+
 
 });
 
 
-//     var specprojIcon = {
-//         url: 'assets/images/specproj.png',
-//         size: new google.maps.Size(48, 48),
-//         origin: new google.maps.Point(0, 0),
-//         anchor: new google.maps.Point(0, 48)
-//     };
 
-// $(function() {
-// $(document).ready(function() {
-//     $("body").mousewheel(function(event, delta) {
-//         console.log("hearing the scroll");
-    //    this.scrollLeft -= (delta * 30);
+$(document).ready(function () {
 
-    //    event.preventDefault();
 
-//     });
-
-// });
-
-//  });
-
+});

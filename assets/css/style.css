@@ -1,168 +1,233 @@
 #map {
-    height: 100%;
+  height: 100%;
 }
 
 .overlay {
-    background-color: transparent;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* ----------TIMELINE CSS---------- */
 
 .line{
-    position: absolute;
-    bottom: 22.5%;
-    border-bottom: 5px dotted aquamarine;
-    width: 100%;
-  }
-  
-  .fixed-to-bottom {
-    position: absolute;
-    bottom: 10%;
-    left: 5%;
-    right: 5%;
-    height: auto;
-    z-index: 2;
-    min-height: 20%;
-    width: auto;
-    overflow-x: auto;
-  }
-  
-  .timeline {
-    position: relative;
-    overflow-x: auto;
-    background-repeat: repeat-x;
-    background-size: 10px 2px;
-    background-position: center top 60%;
-    padding: 20px 0;
-    display: flex;
-    flex: 1 1 100%;
-    flex-flow: row nowrap;
-    transition: height .2s ease-out;
-    transition: height .2s ease-out;
-    transition: height .2s ease-out;
-  }
-  
-  .timeline::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .timeline-item-box {
-    display: inline-block;
-    /* position: absolute; */
-    height: 100%;
-    /* width: auto; */
-    margin: 0 50px;
-    /* white-space: nowrap; */
-    
-    transition:transform .5s ease-in-out;
-  }
-  
-  .timeline-stone {
-    /* display: inline-block; */
-    /* position: absolute;
-    bottom: 30%;
-    right: 50%; */
-    min-width:55px;
-    min-height:55px;
-    max-width:55px;
-    max-height:55px;
-    border: solid 0px black;
-    border-radius:50%;
-    background-color: black;
-    margin: 0 auto;
-    -webkit-transition: background-color .5s ease-in-out;
-    transition: background-color .5s ease-in-out, transform .5s ease-in-out;
-    
-  }
-  
-  .timeline-item {
-    display: inline-block;
-    height: 100%;
-    width: auto;
-    padding: 0 50px;
-  }
-  
-  .timeline-item-info{
-    display: inline-block;
-    /* position: absolute; */
-    top: -100px;
-    
-  }
-  
-  .timeline-title {
-    padding-bottom: 10px;
-    height: 50px;
-    width: 250px;
-    font-size:1.75vw;
-    color: white;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700; 
-    text-align: center;
-    margin: 0;
-    text-shadow: 0px 0px 5px black;
-    
-    
-  }
-  
-  .timeline-org {
-    padding: 10px 0;
-    height: 40px;
-    font-size: 18px;
-    color: white;
-    font-family: 'Damion', sans-serif;
-    text-align: center;
-    margin: 0; 
-    
-    
-  }
+  position: absolute;
+  bottom: 22.5%;
+  border-bottom: 5px dotted aquamarine;
+  width: 100%;
+}
 
-  @media screen and (min-width: 1200px) {
-    .timeline-title {
-        font-size: 20px;
-    }
-  }
+.fixed-to-bottom {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  right: 5%;
+  height: auto;
+  z-index: 2;
+  min-height: 20%;
+  width: auto;
+  overflow-x: auto;
+}
 
-.timeline-item-box:hover {
-    transform:scale(1.1);
- }
+.timeline {
+  position: relative;
+  overflow-x: auto;
+  background-repeat: repeat-x;
+  background-size: 10px 2px;
+  background-position: center top 60%;
+  padding: 20px 0;
+  display: flex;
+  flex: 1 1 100%;
+  flex-flow: row nowrap;
+  transition: height .2s ease-out;
+  transition: height .2s ease-out;
+  transition: height .2s ease-out;
+}
 
- .workfont {
-     color: goldenrod;
- }
+.timeline::-webkit-scrollbar {
+  display: none;
+}
 
- .schoolfont {
-     color: darkviolet;
- }
+.timeline-item-box {
+  display: inline-block;
+  /* position: absolute; */
+  height: 100%;
+  /* width: auto; */
+  margin: 0 50px;
+  /* white-space: nowrap; */
+  
+  transition:transform 1s ease-in-out;
+}
 
- .specprojfont {
-     color: green;
- }
- 
-.school:hover .timeline-stone{background-color: darkviolet;}
+/* #item1 {
+  margin-left: 35%; 
+}
+#item18 {
+  padding-right: 60%;
+} */
 
-.work:hover .timeline-stone{background-color: goldenrod;}
 
-.specproj:hover .timeline-stone{background-color: green;}
+.timeline-stone {
+  /* display: inline-block; */
+  /* position: absolute;
+  bottom: 30%;
+  right: 50%; */
+  min-width:55px;
+  min-height:55px;
+  max-width:55px;
+  max-height:55px;
+  border: solid 0px black;
+  border-radius:50%;
+  background-color: black;
+  margin: 0 auto;
+  -webkit-transition: background-color .5s ease-in-out;
+  transition: background-color .5s ease-in-out, transform 1s ease-in-out;
+  
+}
+
+.timeline-item {
+  display: inline-block;
+  height: 100%;
+  width: auto;
+  padding: 0 50px;
+}
+
+.timeline-item-info{
+  display: inline-block;
+  /* position: absolute; */
+  top: -100px; 
+}
+
+.timeline-leadIn {
+  padding-bottom: 10px;
+  height: 50px;
+  width: 50vw;  
+}
+
+.timeline-title {
+  padding-bottom: 10px;
+  height: 50px;
+  width: 250px;
+  font-size:1.75vw;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700; 
+  text-align: center;
+  margin: 0;
+  text-shadow: 0px 0px 5px black;
+}
+
+.timeline-org {
+  padding: 10px 0;
+  height: 40px;
+  font-size: 18px;
+  color: white;
+  font-family: 'Damion', sans-serif;
+  text-align: center;
+  margin: 0; 
+  
+  
+}
+
+
+/* .timeline-item-box:hover {
+  transform:scale(1.1);
+} */
+
+.workfont {
+   color: white;
+   transition: color .5s ease-in-out;
+}
+
+.schoolfont {
+   color: white;
+   transition: color .5s ease-in-out;
+}
+
+.specprojfont {
+   color: white;
+   transition: color .5s ease-in-out;
+}
+
+.workItemfont {
+ color: goldenrod;
+}
+
+.schoolItemfont {
+ color: darkviolet;
+}
+
+.specprojItemfont {
+ color: green;
+}
+
+.workStone {
+background-color: goldenrod;
+}
+
+.schoolStone {
+background-color: darkviolet;
+}
+
+.specprojStone {
+background-color: green
+}
 
 .schoolpic {
-    content:url(../images/schoolinv.png)
+  content:url(../images/schoolinv.png)
 }
 
 .workpic {
-    content:url(../images/workinv.png)
+  content:url(../images/workinv.png)
 }
 
 .specprojpic {
-    content:url(../images/specprojinv.png)
+  content:url(../images/specprojinv.png)
 }
 
+.year {
+font-family: 'Raleway', sans-serif;
+font-size: 48px;
+color: whitesmoke;
+
+}
+
+#line {
+border-right: dashed 0px red;
+border-left: dashed 0px red;
+position: fixed;
+width: 5%;
+left: 49%;
+height: 100%;
+z-index: 100;
+}
+
+.divScope {
+
+transform:scale(1.15);
+}
+
+#hilight {
+
+position: fixed;
+bottom: 8.25%;
+width: 300px;
+left: 37.5%;
+height: 250px;
+background-color: whitesmoke;
+opacity: .10;
+}
+
+@media screen and (min-width: 1200px) {
+.timeline-title {
+    font-size: 20px;
+}
+}
