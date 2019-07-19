@@ -4,13 +4,8 @@ window.addEventListener("wheel", event => {
     console.info(delta);
 
     var elem = document.getElementById("scrollHoriz");
-<<<<<<< HEAD
-    elem.scrollBy(delta * 25, 0);
-=======
     elem.scrollBy(delta * 20, 0);
->>>>>>> a74b6b813ce2e182ddc570f007fcc649850649b3
 });
-
 
 //declare ifZoom variable
 var ifZoom = 0;
@@ -558,7 +553,7 @@ var resElements = [{
 
 var timer = null;
 
-<<<<<<< HEAD
+
 //wheel event to that runs the function if the wheel has stopped moving for xxx ms
 window.addEventListener('wheel', function () {
     if (timer !== null) {
@@ -751,25 +746,7 @@ varListenForMeToChange.registerListener(function (val) {
 
 });
 
-
-
-$(document).ready(function () {
-
-=======
-                        window.addEventListener('wheel', function () {
-                            if (timer !== null) {
-                                this.clearTimeout(timer);
-                            }
-                            timer = this.setTimeout(function () {
-                                console.log("not scrolling")
-                                delayZooms();
-                            }, 500);
-                        }, false);
-
 window.addEventListener('wheel', checkPosition)
-
-
-
 
 function checkPosition() {
     var lineRight = Math.round(line.getBoundingClientRect().right);
@@ -891,54 +868,31 @@ varListenForMeToChange.registerListener(function (val) {
     }
 });
 
-//add another if here to check if scroll is negative or positive, if negative compare i+1 instead of i-1 and then run some code
-                    // if (i - 1 < 0) {
-                    //     map.setCenter(new google.maps.LatLng(resElements[i].cityLat, resElements[i].cityLon));
-                    //     delayIn();
-                    // }
-                    // else if (resElements[i].cityLat === resElements[i - 1].cityLat && resElements[i].cityLon === resElements[i - 1].cityLon) {
 
-                    // } else {
-                    //     var timer = null;
 
-                    //     window.addEventListener('wheel', function () {
-                    //         if (timer !== null) {
-                    //             this.clearTimeout(timer);
-                    //         }
-                    //         timer = this.setTimeout(function () {
-                    //             console.log("not scrolling")
-                    //             delayZooms();
-                    //         }, 500);
-                    //     }, false);
+// function delayZooms() {
 
-                    // };
+//     for (var i = 0; i < resElements.length; i++) {
 
-function delayZooms() {
+//         if (resElements[i].elementID === checkIt) {
+//             if (compZoom === 12) {
+//                 console.log("compZoom = " + compZoom)
+//                 delayOut();
+//                 var lat = resElements[i].cityLat;
+//                 var lon = resElements[i].cityLon;
+//                 setTimeout(function () { map.setCenter(new google.maps.LatLng(lat, lon)) }, 2000);
+//                 setTimeout(function () { delayIn(); }, 2500);
 
-    for (var i = 0; i < resElements.length; i++) {
-
-        if (resElements[i].elementID === checkIt) {
-            if (compZoom === 12) {
-                console.log("compZoom = " + compZoom)
-                delayOut();
-                var lat = resElements[i].cityLat;
-                var lon = resElements[i].cityLon;
-                setTimeout(function () { map.setCenter(new google.maps.LatLng(lat, lon)) }, 2000);
-                setTimeout(function () { delayIn(); }, 2500);
-
-            } else {
-                map.setCenter(new google.maps.LatLng(resElements[i].cityLat, resElements[i].cityLon));
-                delayIn();
-            }
-        }
-    }
-}
+//             } else {
+//                 map.setCenter(new google.maps.LatLng(resElements[i].cityLat, resElements[i].cityLon));
+//                 delayIn();
+//             }
+//         }
+//     }
+// }
 
 
 $(document).ready(function () {
 
-
-});
->>>>>>> a74b6b813ce2e182ddc570f007fcc649850649b3
 
 });
