@@ -19,6 +19,7 @@ html, body {
 /* ----------TIMELINE CSS---------- */
 
 .line{
+<<<<<<< HEAD
   position: absolute;
   bottom: 22.5%;
   border-bottom: 5px dotted aquamarine;
@@ -63,6 +64,82 @@ html, body {
   /* width: auto; */
   margin: 0 50px;
   /* white-space: nowrap; */
+=======
+    position: absolute;
+    bottom: 22.5%;
+    border-bottom: 5px dotted aquamarine;
+    width: 100%;
+  }
+  
+  .fixed-to-bottom {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    right: 5%;
+    height: auto;
+    z-index: 2;
+    min-height: 20%;
+    width: auto;
+    overflow-x: auto;
+  }
+  
+  .timeline {
+    position: relative;
+    overflow-x: auto;
+    background-repeat: repeat-x;
+    background-size: 10px 2px;
+    background-position: center top 60%;
+    padding: 20px 0;
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: row nowrap;
+    transition: height .2s ease-out;
+    transition: height .2s ease-out;
+    transition: height .2s ease-out;
+  }
+  
+  .timeline::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .timeline-item-box {
+    display: inline-block;
+    /* position: absolute; */
+    height: 100%;
+    /* width: auto; */
+    margin: 0 50px;
+    /* white-space: nowrap; */
+    
+    transition:transform 1s ease-in-out;
+  }
+  
+  /* #item1 {
+    margin-left: 35%; 
+  }
+
+  #item18 {
+    padding-right: 60%;
+  } */
+  
+
+  .timeline-stone {
+    /* display: inline-block; */
+    /* position: absolute;
+    bottom: 30%;
+    right: 50%; */
+    min-width:55px;
+    min-height:55px;
+    max-width:55px;
+    max-height:55px;
+    border: solid 0px black;
+    border-radius:50%;
+    background-color: black;
+    margin: 0 auto;
+    -webkit-transition: background-color .5s ease-in-out;
+    transition: background-color .5s ease-in-out, transform 1s ease-in-out;
+    
+  }
+>>>>>>> a74b6b813ce2e182ddc570f007fcc649850649b3
   
   transition:transform 1s ease-in-out;
 }
@@ -91,6 +168,7 @@ html, body {
   -webkit-transition: background-color .5s ease-in-out;
   transition: background-color .5s ease-in-out, transform 1s ease-in-out;
   
+<<<<<<< HEAD
 }
 
 .timeline-item {
@@ -179,6 +257,87 @@ background-color: darkviolet;
 
 .specprojStone {
 background-color: green
+=======
+  .timeline-item-info{
+    display: inline-block;
+    /* position: absolute; */
+    top: -100px; 
+  }
+  
+  .timeline-leadIn {
+    padding-bottom: 10px;
+    height: 50px;
+    width: 50vw;  
+  }
+
+  .timeline-title {
+    padding-bottom: 10px;
+    height: 50px;
+    width: 250px;
+    font-size:1.75vw;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700; 
+    text-align: center;
+    margin: 0;
+    text-shadow: 0px 0px 5px black;
+  }
+  
+  .timeline-org {
+    padding: 10px 0;
+    height: 40px;
+    font-size: 18px;
+    color: white;
+    font-family: 'Damion', sans-serif;
+    text-align: center;
+    margin: 0; 
+    
+    
+  }
+
+
+/* .timeline-item-box:hover {
+    transform:scale(1.1);
+ } */
+
+ .workfont {
+     color: white;
+     transition: color .5s ease-in-out;
+ }
+
+ .schoolfont {
+     color: white;
+     transition: color .5s ease-in-out;
+ }
+
+ .specprojfont {
+     color: white;
+     transition: color .5s ease-in-out;
+ }
+ 
+ .workItemfont {
+   color: goldenrod;
+ }
+
+ .schoolItemfont {
+   color: darkviolet;
+ }
+
+ .specprojItemfont {
+   color: green;
+ }
+
+ .workStone {
+  background-color: goldenrod;
+ }
+
+.schoolStone {
+  background-color: darkviolet;
+}
+
+.specprojStone {
+  background-color: green
+>>>>>>> a74b6b813ce2e182ddc570f007fcc649850649b3
 }
 
 .schoolpic {
@@ -210,6 +369,7 @@ height: 100%;
 z-index: 100;
 }
 
+<<<<<<< HEAD
 .divScope {
 
 transform:scale(1.15);
@@ -231,3 +391,43 @@ opacity: .10;
     font-size: 20px;
 }
 }
+=======
+.year {
+  font-family: 'Raleway', sans-serif;
+  font-size: 48px;
+  color: whitesmoke;
+
+}
+
+#line {
+  border-right: dashed 0px red;
+  border-left: dashed 0px red;
+  position: fixed;
+  width: 5%;
+  left: 49%;
+  height: 100%;
+  z-index: 100;
+}
+
+.divScope {
+  
+  transform:scale(1.15);
+}
+
+#hilight {
+  
+  position: fixed;
+  bottom: 8.25%;
+  width: 300px;
+  left: 37.5%;
+  height: 250px;
+  background-color: whitesmoke;
+  opacity: .10;
+}
+
+@media screen and (min-width: 1200px) {
+  .timeline-title {
+      font-size: 20px;
+  }
+}
+>>>>>>> a74b6b813ce2e182ddc570f007fcc649850649b3

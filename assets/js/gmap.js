@@ -4,7 +4,11 @@ window.addEventListener("wheel", event => {
     console.info(delta);
 
     var elem = document.getElementById("scrollHoriz");
+<<<<<<< HEAD
     elem.scrollBy(delta * 25, 0);
+=======
+    elem.scrollBy(delta * 20, 0);
+>>>>>>> a74b6b813ce2e182ddc570f007fcc649850649b3
 });
 
 
@@ -554,6 +558,7 @@ var resElements = [{
 
 var timer = null;
 
+<<<<<<< HEAD
 //wheel event to that runs the function if the wheel has stopped moving for xxx ms
 window.addEventListener('wheel', function () {
     if (timer !== null) {
@@ -750,5 +755,190 @@ varListenForMeToChange.registerListener(function (val) {
 
 $(document).ready(function () {
 
+=======
+                        window.addEventListener('wheel', function () {
+                            if (timer !== null) {
+                                this.clearTimeout(timer);
+                            }
+                            timer = this.setTimeout(function () {
+                                console.log("not scrolling")
+                                delayZooms();
+                            }, 500);
+                        }, false);
+
+window.addEventListener('wheel', checkPosition)
+
+
+
+
+function checkPosition() {
+    var lineRight = Math.round(line.getBoundingClientRect().right);
+    var lineLeft = Math.round(line.getBoundingClientRect().left);
+
+    for (var i = 0; i < arrItems.length; i++) {
+        var itemID = document.getElementById(arrItems[i]);
+        var itemLeft = Math.round(itemID.getBoundingClientRect().left);
+        var itemRight = Math.round(itemID.getBoundingClientRect().right);
+
+        if (itemLeft < lineRight && itemRight > lineLeft) {
+            varListenForMeToChange.a = arrItems[i];
+            // console.log(varListenForMeToChange.a);
+        }
+    }
+
+}
+
+varListenForMeToChange = {
+    aInternal: 10,
+    aListener: function (val) { },
+    set a(val) {
+        this.aInternal = val;
+        this.aListener(val);
+    },
+    get a() {
+        return this.aInternal;
+    },
+    registerListener: function (listener) {
+        this.aListener = listener;
+    }
+}
+
+//declare the compZoom variable 
+var compZoom = 0;
+
+//delaying the zoom in, set compZoom
+function delayIn() {
+    setTimeout(function () { map.setZoom(3); }, 250);
+    setTimeout(function () { map.setZoom(4); }, 500);
+    setTimeout(function () { map.setZoom(5); }, 750);
+    setTimeout(function () { map.setZoom(6); }, 1000);
+    setTimeout(function () { map.setZoom(7); }, 1250);
+    setTimeout(function () { map.setZoom(8); }, 1500);
+    setTimeout(function () { map.setZoom(9); }, 1750);
+    setTimeout(function () { map.setZoom(10); }, 2000);
+    setTimeout(function () { map.setZoom(11); }, 2250);
+    setTimeout(function () { map.setZoom(12); }, 2500);
+    compZoom = 12
+
+}
+
+
+//delaying the zoom out
+function delayOut() {
+    setTimeout(function () { map.setZoom(11); }, 250);
+    setTimeout(function () { map.setZoom(10); }, 500);
+    setTimeout(function () { map.setZoom(9); }, 750);
+    setTimeout(function () { map.setZoom(8); }, 1000);
+    setTimeout(function () { map.setZoom(7); }, 1250);
+    setTimeout(function () { map.setZoom(6); }, 1500);
+    // setTimeout(function () { map.setZoom(5); }, 1750);
+    // setTimeout(function () { map.setZoom(4); }, 2250);
+    // setTimeout(function () { map.setZoom(3); }, 2750);
+    setTimeout(function () { map.setZoom(ifZoom); }, 1750);
+}
+
+//need to write an if statement that waits 5 ms to run the code below, does nothing if another scroll has happened
+
+//need to write some code that scrolls timeline to next stone and centers then stops unless scrolling it still happening
+
+varListenForMeToChange.registerListener(function (val) {
+
+    if (checkIt === varListenForMeToChange.a) {
+
+    } else {
+
+        if (checkIt === "") {
+
+        } else {
+
+            document.getElementById(checkIt).classList.remove('divScope');
+
+            //remove color: loop through the resElements object array
+            for (var i = 0; i < resElements.length; i++) {
+
+                // if resElement.elementID equals focused itemID remove fontType and stoneType property from object array to class list
+                if (resElements[i].elementID === checkIt) {
+                    document.getElementById(resElements[i].elemPara).classList.remove(resElements[i].fontType);
+                    document.getElementById(resElements[i].elemStone).classList.remove(resElements[i].stoneType);
+                };
+            };
+        }
+
+        checkIt = varListenForMeToChange.a;
+        console.log("varListen = " + varListenForMeToChange.a);
+        console.log("checkIt = " + checkIt);
+
+        var varWhichItem = document.getElementById(varListenForMeToChange.a);
+
+        if (checkIt === "") {
+
+        } else {
+            varWhichItem.classList.add('divScope');
+
+            //add color: loop through the resElements object array
+            for (var i = 0; i < resElements.length; i++) {
+
+                // if resElement.elementID equals focused itemID add fontType and stoneType property from object array to class list
+                if (resElements[i].elementID === checkIt) {
+                    document.getElementById(resElements[i].elemPara).classList.add(resElements[i].fontType);
+                    document.getElementById(resElements[i].elemStone).classList.add(resElements[i].stoneType);
+
+                    // console log lat,long
+                    console.log(resElements[i].cityLat + ", " + resElements[i].cityLon);
+                };
+            };
+        }
+    }
+});
+
+//add another if here to check if scroll is negative or positive, if negative compare i+1 instead of i-1 and then run some code
+                    // if (i - 1 < 0) {
+                    //     map.setCenter(new google.maps.LatLng(resElements[i].cityLat, resElements[i].cityLon));
+                    //     delayIn();
+                    // }
+                    // else if (resElements[i].cityLat === resElements[i - 1].cityLat && resElements[i].cityLon === resElements[i - 1].cityLon) {
+
+                    // } else {
+                    //     var timer = null;
+
+                    //     window.addEventListener('wheel', function () {
+                    //         if (timer !== null) {
+                    //             this.clearTimeout(timer);
+                    //         }
+                    //         timer = this.setTimeout(function () {
+                    //             console.log("not scrolling")
+                    //             delayZooms();
+                    //         }, 500);
+                    //     }, false);
+
+                    // };
+
+function delayZooms() {
+
+    for (var i = 0; i < resElements.length; i++) {
+
+        if (resElements[i].elementID === checkIt) {
+            if (compZoom === 12) {
+                console.log("compZoom = " + compZoom)
+                delayOut();
+                var lat = resElements[i].cityLat;
+                var lon = resElements[i].cityLon;
+                setTimeout(function () { map.setCenter(new google.maps.LatLng(lat, lon)) }, 2000);
+                setTimeout(function () { delayIn(); }, 2500);
+
+            } else {
+                map.setCenter(new google.maps.LatLng(resElements[i].cityLat, resElements[i].cityLon));
+                delayIn();
+            }
+        }
+    }
+}
+
+
+$(document).ready(function () {
+
+
+});
+>>>>>>> a74b6b813ce2e182ddc570f007fcc649850649b3
 
 });
