@@ -356,33 +356,42 @@ var resElements = [{
     elemPara: "pitem1",
     elemStone: "stone1",
     city: "Fort Worth, TX",
-    cityLat: 32.7555,
-    cityLon: -97.3308,
+    cityLat: 32.751705,
+    cityLon: -97.330621,
     locationType: "work",
     fontType: "workItemfont",
-    stoneType: "workStone"
+    stoneType: "workStone",
+    note1: "Texas High Cost Well: applied for tax rate discounts for a savings of over $300 million.",
+    note2: "Oklahoma Horizontal Well tax refunds: received over $3 million applying for tax refunds.",
+    note3: "Utah Stripper Well Credits: received over $2 million in tax credits on Stripper Well applications."
 },
 {
     elementID: "item2",
     elemPara: "pitem2",
     elemStone: "stone2",
     city: "Fort Worth, TX",
-    cityLat: 32.7555,
-    cityLon: -97.3308,
+    cityLat: 32.653600,
+    cityLon: -97.316063,
     locationType: "work",
     fontType: "workItemfont",
-    stoneType: "workStone"
+    stoneType: "workStone",
+    note1: "One of 3 selected from a pool of 20 qualified students for a one year program that merged course work and an internship with Alcon’s Global Supply Chain Department.",
+    note2: "Product Supply Chain Mapping: Collaborated with all ISC functions of the business while mapping a supply chain for a seasonal pharmaceutical product from the Forecasting and MRP functions to differing domestic and international distribution strategies to the end customer.",
+    note3: "Stock Availability Rate (SAR): Analyzed data to identify trends and high risk areas of inventory depletion for LACAR, CAFE, and EURMEA global regions."
 },
 {
     elementID: "item3",
     elemPara: "pitem3",
     elemStone: "stone3",
     city: "Fort Worth, TX",
-    cityLat: 32.7555,
-    cityLon: -97.3308,
+    cityLat: 32.709879,
+    cityLon: -97.360426,
     locationType: "school",
     fontType: "schoolItemfont",
-    stoneType: "schoolStone"
+    stoneType: "schoolStone",
+    note1: "Bachelor of Business Administration | Neeley School of Business",
+    note2: "Major: Supply and Value Chain Management",
+    note3: "Minors: Accouting, Economics"
 },
 {
     elementID: "item4",
@@ -393,7 +402,11 @@ var resElements = [{
     cityLon: -71.4128,
     locationType: "work",
     fontType: "workItemfont",
-    stoneType: "workStone"
+    stoneType: "workStone",
+    note1: "Selected for a two-year program consisting of four six-month rotations with multiple organizations in cross-functional supply chain roles",
+    note2: "Organizations: Cessna, Bell Helicopter, E-Z-GO, Greenlee",
+    note3: "Roles: Safety Process Leader, Supplier Development Specialist, Buyer/Planner, Operations Supervisor"
+    
 },
 {
     elementID: "item5",
@@ -404,7 +417,10 @@ var resElements = [{
     cityLon: -97.3301,
     locationType: "work",
     fontType: "workItemfont",
-    stoneType: "workStone"
+    stoneType: "workStone",
+    note1: "Automated Safety Audit and Roll Out: Applied the DMAIC framework to develop an automated solution that captures monthly Safety Audit findings across operations, averaging 100 entries per month across multiple facilities.",
+    note2: "Metal Bond Finished Goods Supermarket: Used data analysis to identify which parts could withstand leaner inventory levels.",
+    note3: "EHS Compliance Management: Worked to resolve high priority, safety-related audit findings. Interacted with various teams working towards resolutions and managed status reports."
 },
 {
     elementID: "item6",
@@ -415,7 +431,9 @@ var resElements = [{
     cityLon: -101.8313,
     locationType: "work",
     fontType: "workItemfont",
-    stoneType: "workStone"
+    stoneType: "workStone",
+    note1: "Kaizen: Coordinated and assisted in facilitation of Kaizen event on-site at a supplier facility. Collected data on process for two (2) parts with consistently late delivery, generated action items, and distributed a control plan for action item execution.",
+    note2: "Standard Work: Created standard work document to reduce the on-boarding time for LDPs, including key contacts and step-by-step access requests processes."
 },
 {
     elementID: "item7",
@@ -426,7 +444,9 @@ var resElements = [{
     cityLon: -82.0105,
     locationType: "work",
     fontType: "workItemfont",
-    stoneType: "workStone"
+    stoneType: "workStone",
+    note1: "Buyer/Planner: Achieved a 93.38% fill rate for 300+ SKUs. Reduced number of SKUs backordered from 42 to 15 over a 6 month period. Developed procedures and standard work for strategic prioritization of open orders for key suppliers.",
+    note2: "Overseas Suppliers: Strategically managed container quantities to minimize per unit logistics cost, considering variables such as shipping lead time, Chinese New Year shutdowns, and demand.",
 },
 {
     elementID: "item8",
@@ -437,7 +457,10 @@ var resElements = [{
     cityLon: -90.0490,
     locationType: "work",
     fontType: "workItemfont",
-    stoneType: "workStone"
+    stoneType: "workStone",
+    note1: "Operations Supervisor: Lead the execution of kitting for approximately 1500 SKUs. Managed the day-to-day for 20 operators and 5 material handlers. Strategically allocated labor to special projects and stock builds for new product launches while maintaining productivity. Focused team mission on pillars of Safety, Quality, Productivity, and Product Availability (Customer Satisfaction).",
+    note2: "Kanban: Analyzed volume and frequency data from SAP tables (MCTC, MARA) to determine high demand SKUs to put on pull system. Determined kanban container quantity and number of containers required based on safety stock and demand requirements for approximately 200 SKUs. Designed templates for labels and signal cards, implemented for 25+ SKUs.",
+    note3: "Work Cell Design: Lead the continuous improvement of 9 different work cells. Analyzed component usage to identify point-of-use space allocation for high running parts. Maximized efficiency by reducing motion and transportation muda."
 },
 {
     elementID: "item9",
@@ -448,7 +471,11 @@ var resElements = [{
     cityLon: -97.3301,
     locationType: "work",
     fontType: "workItemfont",
-    stoneType: "workStone"
+    stoneType: "workStone",
+    note1: "Leading teams to identify Root Cause Corrective Actions for injuries and near miss incidents with Lean (waste elimination) and Six Sigma (variation elimination) tools and principles.",
+    note2: "Apply Plan, Do, Check, Act cycle to managing implementation of pro-active EHS risk mitigation projects.",
+    note3: "Coach the use of Define, Measure, Analyze, Improve, Control (DMAIC) problem solving methodology and associated tools.",
+    note4: "Programmed Hazardous Waste Manifest tracking tools with VBA. Reduced user time requirementby 80%."
 },
 {
     elementID: "item10",
@@ -459,7 +486,9 @@ var resElements = [{
     cityLon: -106.0691,
     locationType: "specproj",
     fontType: "specprojItemfont",
-    stoneType: "specprojStone"
+    stoneType: "specprojStone",
+    note1: "Participated in Sleeping Facility and Energy Loss tours.",
+    note2: "Worked with team to prioritize energy saving opportunities based on estimated ROI. Presented to organzation's leadership."
 },
 {
     elementID: "item11",
@@ -470,7 +499,10 @@ var resElements = [{
     cityLon: -97.3301,
     locationType: "work",
     fontType: "workItemfont",
-    stoneType: "workStone"
+    stoneType: "workStone",
+    note1: "Developed Hazardous Waste Tracking application for manifest and waste-profile generation tracking. Included automated reporting functionality for annual reporting requirements.",
+    note2: "Designed and implemented a new incident investigation form that leveraged the DMAIC cycle, a commonly understood tool within the organization.",
+    note3: "Lead Kaizen events to blitz compliance issues and injury risks in key departments."
 },
 {
     elementID: "item12",
@@ -481,7 +513,10 @@ var resElements = [{
     cityLon: -122.6793,
     locationType: "work",
     fontType: "workItemfont",
-    stoneType: "workStone"
+    stoneType: "workStone",
+    note1: "Analyzed injury data to identify trending injury types and common variables. Prioritized preventative action by high frequency and high severity. Reduced annual first-aid cuts from ~100 to ~20",
+    note2: "Developed and deployed intranet site for employees to locate program information. Developed and deployed department dashboard to facilitate tracking of open safety action items.",
+    note3: "Developed new hire orientation training. Created interactive activities to educate on risk management and build culture."
 },
 {
     elementID: "item13",
@@ -492,7 +527,8 @@ var resElements = [{
     cityLon: 111.9822,
     locationType: "specproj",
     fontType: "specprojItemfont",
-    stoneType: "specprojStone"
+    stoneType: "specprojStone",
+    item1: ""
 },
 {
     elementID: "item14",
@@ -503,7 +539,10 @@ var resElements = [{
     cityLon: -122.6793,
     locationType: "work",
     fontType: "workItemfont",
-    stoneType: "workStone"
+    stoneType: "workStone",
+    note1: "Set annual vision and strategy for EHS functional objectives. Define key performance indicators and communicate targets to all levels of the organization.",
+    note2: "Reviewed and revised EHS programs to ensure compliance with regulations. Developed automated, interactive training format to train impacted personnel on program changes.",
+    note3: "Developed and deployed automated training program, including interactive, dynamic quizzing, and electronic distribution of results."
 },
 {
     elementID: "item15",
@@ -514,7 +553,9 @@ var resElements = [{
     cityLon: -82.8374,
     locationType: "school",
     fontType: "schoolItemfont",
-    stoneType: "schoolStone"
+    stoneType: "schoolStone",
+    note1: "Master of Engineering | College of Engineering, Computing and Applied Sciences",
+    note2: "Industrial Engineering"
 },
 {
     elementID: "item16",
@@ -525,7 +566,10 @@ var resElements = [{
     cityLon: -122.6793,
     locationType: "work",
     fontType: "workItemfont",
-    stoneType: "workStone"
+    stoneType: "workStone",
+    note1: "Work with project sponsors to define scope and develop charters. Lead process improvement, facility, new product, and special make-up projects.",
+    note2: "Communicate project risks (scope, timeline, budget) to stakeholders and sponsors on a regular cadence. Circle up key functions to identify mitigation and contingency plans for identified risks.",
+    note3: "Managed new product, product redesign, facility and process improvement projects."
 },
 {
     elementID: "item17",
@@ -536,7 +580,8 @@ var resElements = [{
     cityLon: -109.9167,
     locationType: "specproj",
     fontType: "specprojItemfont",
-    stoneType: "specprojStone"
+    stoneType: "specprojStone",
+    note1: "Participated in week-long, strategic retreat. Presented with teams covering Cost Savings Opportunities and The Future of Direct to Consumer."
 },
 {
     elementID: "item18",
@@ -547,7 +592,8 @@ var resElements = [{
     cityLon: -122.6793,
     locationType: "school",
     fontType: "schoolItemfont",
-    stoneType: "schoolStone"
+    stoneType: "schoolStone",
+    note1: "Accelerated 24-week program curriculum covers full stack web development essentials including data structures, algorithms, HTML, CSS, JavaScript, application deployment, database management, server side development, quality assurance and many other concepts and technologies."
 },
 ];
 
@@ -600,9 +646,13 @@ function doTheZoom() {
                     delayOut();
                     howlongcenter = 2000;
                     howlongin = 2500;
+                } else {
+                    howlongcenter = 0;
+                    howlongin = 0;
                 }
 
-                setTimeout(function () { map.setCenter(new google.maps.LatLng(lat, lon)) }, howlongcenter);
+                setTimeout(function () { map.panTo({lat: lat, lng: lon}) }, howlongcenter);
+                // setTimeout(function () { map.setCenter(new google.maps.LatLng(lat, lon)) }, howlongcenter);
                 setTimeout(function () { delayIn(); }, howlongin);
 
             }
@@ -614,6 +664,14 @@ function doTheZoom() {
 window.addEventListener('wheel', checkPosition)
 
 function checkPosition() {
+    //get container element by id
+    //manipulate DOM .. insert css to id: background: rgba(51,51,51,.50);
+    document.getElementById("container").style.background = "transparent";
+    document.getElementById("fixed-to-bottom").classList.add ('animated', 'fadeInRight', 'slower');
+    // const element = document.querySelector('.fixed-to-bottom');
+    // element.classList.add('animated', 'fadeInRight', 'slower');
+    
+
     var lineRight = Math.round(line.getBoundingClientRect().right);
     var lineLeft = Math.round(line.getBoundingClientRect().left);
 
@@ -633,6 +691,10 @@ function checkPosition() {
                 console.log("varListenForMeToChange has changed");
                 // isNew = "true";
             }
+        }
+
+        if (varListenForMeToChange.a === "item1") {
+            document.getElementById("container").style.opacity = "0";
         }
     }
 
@@ -681,9 +743,9 @@ function delayOut() {
     setTimeout(function () { map.setZoom(8); }, 1000);
     setTimeout(function () { map.setZoom(7); }, 1250);
     setTimeout(function () { map.setZoom(6); }, 1500);
-    // setTimeout(function () { map.setZoom(5); }, 1750);
-    // setTimeout(function () { map.setZoom(4); }, 2250);
-    // setTimeout(function () { map.setZoom(3); }, 2750);
+    setTimeout(function () { map.setZoom(5); }, 1750);
+    setTimeout(function () { map.setZoom(4); }, 2250);
+    setTimeout(function () { map.setZoom(3); }, 2750);
     setTimeout(function () { map.setZoom(ifZoom); }, 1750);
     compZoom = ifZoom;
 }
@@ -745,25 +807,6 @@ varListenForMeToChange.registerListener(function (val) {
 
 
 });
-
-window.addEventListener('wheel', checkPosition)
-
-function checkPosition() {
-    var lineRight = Math.round(line.getBoundingClientRect().right);
-    var lineLeft = Math.round(line.getBoundingClientRect().left);
-
-    for (var i = 0; i < arrItems.length; i++) {
-        var itemID = document.getElementById(arrItems[i]);
-        var itemLeft = Math.round(itemID.getBoundingClientRect().left);
-        var itemRight = Math.round(itemID.getBoundingClientRect().right);
-
-        if (itemLeft < lineRight && itemRight > lineLeft) {
-            varListenForMeToChange.a = arrItems[i];
-            // console.log(varListenForMeToChange.a);
-        }
-    }
-
-}
 
 varListenForMeToChange = {
     aInternal: 10,
