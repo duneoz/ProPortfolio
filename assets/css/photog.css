@@ -1,0 +1,36 @@
+#left-side {
+    border: dashed 1px red;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    bottom: 5%;
+    height: 90%;
+    width: 30%;
+}
+
+#right-top {
+    border: dashed 1px red;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    height: 26.667%;
+    width: 55%;
+}
+
+#right-middle {
+    border: dashed 1px red;
+    position: absolute;
+    top: 36.667%;
+    right: 5%;
+    height: 26.667%;
+    width: 55%;
+}
+
+#right-bottom {
+    border: dashed 1px red;
+    position: absolute;
+    top: 68.333%;
+    right: 5%;
+    height: 26.667%;
+    width: 55%;
+}

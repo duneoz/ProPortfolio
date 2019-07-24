@@ -631,7 +631,7 @@ function doTheZoom() {
         if (itemLeft2 < lineRight2 && itemRight2 > lineLeft2) {
 
             if (variable1 === resElements[i].elementID) {
-                console.log("varialbe 1 didnt change")
+                console.log("variable 1 didnt change")
 
             } else if (variablelat === resElements[i].cityLat && variablelon === resElements[i].cityLon) {
             } else {
@@ -644,8 +644,8 @@ function doTheZoom() {
                 var lon = resElements[i].cityLon;
                 if (compZoom === 12) {
                     delayOut();
-                    howlongcenter = 2000;
-                    howlongin = 2500;
+                    howlongcenter = 3750;
+                    howlongin = 4000;
                 } else {
                     howlongcenter = 0;
                     howlongin = 0;
