@@ -664,6 +664,9 @@ function doTheZoom() {
 window.addEventListener('wheel', checkPosition)
 
 function checkPosition() {
+
+
+
     //get container element by id
     //manipulate DOM .. insert css to id: background: rgba(51,51,51,.50);
     document.getElementById("container").style.background = "transparent";
@@ -696,6 +699,8 @@ function checkPosition() {
         if (varListenForMeToChange.a === "item1") {
             document.getElementById("container").style.opacity = "0";
         }
+
+    
     }
 
 }
@@ -715,42 +720,7 @@ varListenForMeToChange = {
     }
 }
 
-//declare the compZoom variable 
-var compZoom = 0;
 
-//delaying the zoom in, set compZoom
-function delayIn() {
-    setTimeout(function () { map.setZoom(3); }, 250);
-    setTimeout(function () { map.setZoom(4); }, 500);
-    setTimeout(function () { map.setZoom(5); }, 750);
-    setTimeout(function () { map.setZoom(6); }, 1000);
-    setTimeout(function () { map.setZoom(7); }, 1250);
-    setTimeout(function () { map.setZoom(8); }, 1500);
-    setTimeout(function () { map.setZoom(9); }, 1750);
-    setTimeout(function () { map.setZoom(10); }, 2000);
-    setTimeout(function () { map.setZoom(11); }, 2250);
-    setTimeout(function () { map.setZoom(12); }, 2500);
-    compZoom = 12
-
-}
-
-
-//delaying the zoom out
-function delayOut() {
-    setTimeout(function () { map.setZoom(11); }, 250);
-    setTimeout(function () { map.setZoom(10); }, 500);
-    setTimeout(function () { map.setZoom(9); }, 750);
-    setTimeout(function () { map.setZoom(8); }, 1000);
-    setTimeout(function () { map.setZoom(7); }, 1250);
-    setTimeout(function () { map.setZoom(6); }, 1500);
-    setTimeout(function () { map.setZoom(5); }, 1750);
-    setTimeout(function () { map.setZoom(4); }, 2250);
-    setTimeout(function () { map.setZoom(3); }, 2750);
-    setTimeout(function () { map.setZoom(ifZoom); }, 1750);
-    compZoom = ifZoom;
-}
-
-//need to write an if statement that waits 5 ms to run the code below, does nothing if another scroll has happened
 
 //need to write some code that scrolls timeline to next stone and centers then stops unless scrolling it still happening
 
@@ -838,6 +808,10 @@ function delayIn() {
     setTimeout(function () { map.setZoom(10); }, 2000);
     setTimeout(function () { map.setZoom(11); }, 2250);
     setTimeout(function () { map.setZoom(12); }, 2500);
+    //manipulate dom to show detail id div, maybe an animation?
+    setTimeout(function () { document.getElementById("detail").style.opacity = '1';}, 2700);
+    console.log("should be visible")
+    //manipulate dom to include item detail from object array data, maybe an animation?
     compZoom = 12
 
 }
@@ -851,10 +825,10 @@ function delayOut() {
     setTimeout(function () { map.setZoom(8); }, 1000);
     setTimeout(function () { map.setZoom(7); }, 1250);
     setTimeout(function () { map.setZoom(6); }, 1500);
-    // setTimeout(function () { map.setZoom(5); }, 1750);
-    // setTimeout(function () { map.setZoom(4); }, 2250);
-    // setTimeout(function () { map.setZoom(3); }, 2750);
-    setTimeout(function () { map.setZoom(ifZoom); }, 1750);
+    setTimeout(function () { map.setZoom(5); }, 1750);
+    setTimeout(function () { map.setZoom(4); }, 2250);
+    setTimeout(function () { map.setZoom(3); }, 2750);
+    setTimeout(function () { map.setZoom(ifZoom); }, 3000);
 }
 
 //need to write an if statement that waits 5 ms to run the code below, does nothing if another scroll has happened

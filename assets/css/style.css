@@ -6,6 +6,24 @@
   visibility: hidden;
 } */
 
+#detail {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  height: 40%;
+  width: 30%;
+  background-color: rgba(245, 245, 245, .50);
+  z-index: 1;
+  /* visibility: hidden; */
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  color: darkviolet;
+  text-align: center;
+  font-size: 24px;
+}
+
 .overlay {
   background-color: transparent;
   position: absolute;
@@ -207,17 +225,22 @@ color: whitesmoke;
 }
 
 #line {
-border-right: dashed 0px red;
-border-left: dashed 0px red;
-position: fixed;
-width: 15%;
-left: 49%;
-height: 100%;
-z-index: 100;
+/* border-right: dashed 0px red;
+border-left: dashed 0px red; */
+/* position: fixed; */
+/* width: 15%;
+left: 49%; */
+/* height: 100%;
+z-index: 100; */
+border: dashed 0px red;
+position: absolute;
+top: 10%;
+left: 10%;
+width: 80%;
+height: 80%;
 }
 
 .divScope {
-
 transform:scale(1.15);
 }
 
