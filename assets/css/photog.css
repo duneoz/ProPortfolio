@@ -1,12 +1,15 @@
 #left-side {
     border: dashed 1px red;
     position: absolute;
+    display: flex;
     top: 5%;
     left: 5%;
     bottom: 5%;
     height: 90%;
     width: 30%;
+    align-items: center;
 }
+
 
 #right-top {
     border: dashed 1px red;
@@ -33,4 +36,17 @@
     right: 5%;
     height: 26.667%;
     width: 55%;
+}
+
+#pic-plain{
+    width: 100%;
+    display: block;
+}
+
+#pic-special{
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    /* display: none; */
+    opacity: 0;
 }
