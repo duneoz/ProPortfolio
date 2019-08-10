@@ -1,5 +1,14 @@
+body {
+    background-color: rgb(32, 37, 37);
+    background-image: url(../images/NGC2237_HO_2011_.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
 #left-side {
-    border: dashed 1px red;
+    /* border: dashed 1px red; */
     position: absolute;
     display: flex;
     top: 5%;
@@ -10,32 +19,86 @@
     align-items: center;
 }
 
-
-#right-top {
-    border: dashed 1px red;
+#right-side-wrap {
     position: absolute;
+    width: 55%;
+    height: 90%;
     top: 5%;
     right: 5%;
-    height: 26.667%;
-    width: 55%;
 }
+
+#right-top {
+    /* border: dashed 1px red; */
+    /* position: absolute;
+    top: 5%;
+    right: 5%; */
+    position: relative;
+    padding-bottom: 2.5%;
+    height: 30%;
+    width: 100%;
+    transition: height .5s ease-in, opacity .5s ease-in-out, padding-bottom .5s ease-in-out;
+}
+
+/* 
+#right-top:hover {
+    padding-bottom: 20%;
+}
+
+#right-top:hover #img-rt {
+    padding-bottom: 50%;
+}
+
+#right-top:hover ~ #right-middle {
+    opacity: 0;
+}
+
+#right-top:hover ~ #right-bottom {
+    opacity: 0;
+} */
 
 #right-middle {
-    border: dashed 1px red;
-    position: absolute;
+    /* border: dashed 1px red; */
+    /* position: absolute;
     top: 36.667%;
-    right: 5%;
-    height: 26.667%;
-    width: 55%;
+    right: 5%; */
+    position: relative;
+    padding-top: 2.5%;
+    height: 30%;
+    width: 100%;
+    padding-bottom: 2.5%;
+    transition: height .5s ease-in-out, opacity .5s ease-in-out, padding-top .5s ease-in-out, padding-bottom .5s ease-in-out;
 }
 
+/* #right-middle:hover {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    top: 25%;
+} */
+
+/* #right-middle:hover #img-rm {
+    padding-top: 25%;
+    padding-bottom: 25%;
+    
+}
+
+body > #right-middle:hover ~ #right-top {
+    opacity: 0;
+}
+
+#right-middle:hover ~ #right-bottom {
+    opacity: 0;
+} */
+
 #right-bottom {
-    border: dashed 1px red;
-    position: absolute;
+    /* border: dashed 1px red; */
+    /* position: absolute;
     top: 68.333%;
-    right: 5%;
-    height: 26.667%;
-    width: 55%;
+    right: 5%; */
+    position: relative;
+    padding-top: 2.5%;
+    height: 30%;
+    width: 100%;
+    transition: height .5s ease-in-out, opacity .5s ease-in-out, padding .5s ease-in-out;
 }
 
 #pic-plain{
@@ -48,5 +111,43 @@
     position: absolute;
     left: 0px;
     /* display: none; */
-    opacity: 0;
+    /* opacity: 0; */
+    animation: fade 3s alternate infinite;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+img {
+    width: 100%;
+}
+
+.right {
+    height: 100%;
+    overflow: hidden;
+}
+
+#img-rt {
+    display: flex;
+    align-items: flex-start;
+    transition: padding-bottom .5s ease-in, height .5s ease-in-out;
+}
+
+#img-rm {
+    display: flex;
+    align-items: center;
+    transition: padding-top .5s ease-in-out, padding-bottom .5s ease-in-out, height .5s ease-in-out;
+}
+
+#img-rb {
+    display: flex;
+    align-items: flex-end;
+    transition: height .5s ease-in-out, opacity .5s ease-in-out, padding .5s ease-in-out;
 }
