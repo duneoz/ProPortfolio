@@ -31,29 +31,53 @@ var fadeThis1 = "";
 var fadeThis2 = "";
 var allowFade = true;
 
-document.getElementById('right-top').onmouseover = function () { elementID = 'img-rt'; fadeThis1 = 'img-rm'; fadeThis2 = 'img-rb'; emphasizeImg(); };
+document.getElementById('right-top').onmouseover = function () { elementID = 'right-top'; fadeThis1 = 'right-middle'; fadeThis2 = 'right-bottom'; emphasizeImg(); };
 document.getElementById('right-top').onmouseout = function () { deemphasizeImg() };
 
-document.getElementById('right-middle').onmouseover = function () { elementID = 'img-rm'; fadeThis1 = 'img-rt'; fadeThis2 = 'img-rb'; emphasizeImg(); };
+document.getElementById('right-middle').onmouseover = function () { elementID = 'right-middle'; fadeThis1 = 'right-top'; fadeThis2 = 'right-bottom'; emphasizeImg(); };
 document.getElementById('right-middle').onmouseout = function () { deemphasizeImg() };
 
-document.getElementById('right-bottom').onmouseover = function () { elementID = 'img-rb'; fadeThis1 = 'img-rt'; fadeThis2 = 'img-rm'; emphasizeImg(); };
+document.getElementById('right-bottom').onmouseover = function () { elementID = 'right-bottom'; fadeThis1 = 'right-top'; fadeThis2 = 'right-middle'; emphasizeImg(); };
 document.getElementById('right-bottom').onmouseout = function () { deemphasizeImg() };
 
 function emphasizeImg() {
 
-    if (elementID = 'img-rt') {
+    if (elementID === 'right-top') {
         console.log("Element ID: ", elementID);
         console.log("fadeThis1: ", fadeThis1);
         console.log("fadeThis2: ", fadeThis2);
-        document.getElementById(elementID).style.paddingBottom = "50%";
+        document.getElementById('grid-container').style.gridTemplateRows = "90% 0% 0%";
+      
+    } else if (elementID === 'right-middle') {
+        console.log("Element ID: ", elementID);
+        console.log("fadeThis1: ", fadeThis1);
+        console.log("fadeThis2: ", fadeThis2);
+        document.getElementById('grid-container').style.gridTemplateRows = "0% 90% 0%";
+    } else if (elementID === 'right-bottom') {
+        console.log("Element ID: ", elementID);
+        console.log("fadeThis1: ", fadeThis1);
+        console.log("fadeThis2: ", fadeThis2);
+        document.getElementById('grid-container').style.gridTemplateRows = "0% 0% 90%";
     }
 }
 
 function deemphasizeImg() {
-    if (elementID = 'img-rt') {
-        document.getElementById(elementID).style.padding = "0%";
-    }
+
+    // if (elementID === 'right-top') {
+        document.getElementById('grid-container').style.gridTemplateRows = "30% 30% 30%";
+    // } else if (elementID === 'right-middle') {
+    //     document.getElementById('grid-container').style.gridTemplateRows = "33.3333% 33.3333% 33.3333%";
+    // }
+    // if (elementID === 'img-rt') {
+    //     document.getElementById('right-top').style.height = "30%";
+    //     setTimeout( function () {document.getElementById('right-middle').style.height = "30%";}, 500);
+    //     setTimeout( function () {document.getElementById('right-bottom').style.height = "30%";}, 500);
+        
+        
+    // } else if (elementID === 'img-rm') {
+    //     document.getElementById(elementID).style.paddingTop = "0";
+        
+    // }
 }
 // function emphasizeImg() {
 

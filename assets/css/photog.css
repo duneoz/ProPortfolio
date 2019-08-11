@@ -27,17 +27,17 @@ body {
     right: 5%;
 }
 
-#right-top {
-    /* border: dashed 1px red; */
-    /* position: absolute;
+/* #right-top {
+    border: dashed 1px red;
+    position: absolute;
     top: 5%;
-    right: 5%; */
+    right: 5%;
     position: relative;
     padding-bottom: 2.5%;
     height: 30%;
     width: 100%;
     transition: height .5s ease-in, opacity .5s ease-in-out, padding-bottom .5s ease-in-out;
-}
+} */
 
 /* 
 #right-top:hover {
@@ -56,18 +56,18 @@ body {
     opacity: 0;
 } */
 
-#right-middle {
-    /* border: dashed 1px red; */
-    /* position: absolute;
+/* #right-middle {
+    border: dashed 1px red;
+    position: absolute;
     top: 36.667%;
-    right: 5%; */
+    right: 5%;
     position: relative;
     padding-top: 2.5%;
     height: 30%;
     width: 100%;
     padding-bottom: 2.5%;
     transition: height .5s ease-in-out, opacity .5s ease-in-out, padding-top .5s ease-in-out, padding-bottom .5s ease-in-out;
-}
+} */
 
 /* #right-middle:hover {
     padding-top: 10%;
@@ -89,17 +89,17 @@ body > #right-middle:hover ~ #right-top {
     opacity: 0;
 } */
 
-#right-bottom {
-    /* border: dashed 1px red; */
-    /* position: absolute;
+/* #right-bottom {
+    border: dashed 1px red;
+    position: absolute;
     top: 68.333%;
-    right: 5%; */
+    right: 5%;
     position: relative;
     padding-top: 2.5%;
     height: 30%;
     width: 100%;
     transition: height .5s ease-in-out, opacity .5s ease-in-out, padding .5s ease-in-out;
-}
+} */
 
 #pic-plain{
     width: 100%;
@@ -134,7 +134,7 @@ img {
     overflow: hidden;
 }
 
-#img-rt {
+/* #img-rt {
     display: flex;
     align-items: flex-start;
     transition: padding-bottom .5s ease-in, height .5s ease-in-out;
@@ -150,4 +150,40 @@ img {
     display: flex;
     align-items: flex-end;
     transition: height .5s ease-in-out, opacity .5s ease-in-out, padding .5s ease-in-out;
-}
+} */
+
+#grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 30% 30% 30%;
+    grid-gap: 5%;
+    /* background-color: #2196F3; */
+    /* padding: 10px; */
+    height: 100%;
+    /* overflow: hidden; */
+    transition: grid-template-rows .5s ease-in-out;
+  }
+  
+  #grid-container > div {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    text-align: center;
+    /* padding: 20px 0; */
+    font-size: 30px;
+    overflow: hidden;
+    transition: grid-template-rows .5s ease-in-out;
+  }
+
+  #right-top {
+      display: flex;
+      align-items: flex-start;
+  }
+
+  #right-middle {
+    display: flex;
+    align-items: center;
+  }
+
+  #right-bottom {
+      display: flex;
+      align-items: flex-end;
+  }
