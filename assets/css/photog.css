@@ -161,7 +161,7 @@ img {
     /* padding: 10px; */
     height: 100%;
     /* overflow: hidden; */
-    transition: grid-template-rows .5s ease-in-out;
+    transition: all .5s ease-in-out;
   }
   
   #grid-container > div {
@@ -170,7 +170,7 @@ img {
     /* padding: 20px 0; */
     font-size: 30px;
     overflow: hidden;
-    transition: grid-template-rows .5s ease-in-out;
+    transition: all .5s ease-in-out;
   }
 
   #right-top {
