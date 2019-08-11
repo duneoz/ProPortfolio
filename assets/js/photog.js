@@ -42,50 +42,68 @@ document.getElementById('right-bottom').onmouseout = function () { deemphasizeIm
 
 function emphasizeImg() {
 
-    if (allowFade == true) {
-
-        allowFade = false;
-
-        console.log("recognized hover");
-        //find the img height
-        // var h = 0;
-
-        // h = document.getElementsByTagName('img').height;
-        // console.log(h);
+    if (elementID = 'img-rt') {
         console.log("Element ID: ", elementID);
-
-        if (elementID === 'img-rt') {
-            //change the div height
-            document.getElementById(elementID).style.paddingBottom = "50%";
-        } else if (elementID === 'img-rm') {
-            document.getElementById(elementID).style.paddingTop = "25%";
-            document.getElementById(elementID).style.paddingBottom = "25%";
-        } else if (elementID === 'img-rb') {
-            document.getElementById(elementID).style.paddingTop = "60%";
-            // document.getElementById('right-bottom').style.position = "relative";
-            
-        }
-
-        //hide the other divs
-        document.getElementById(fadeThis1).style.opacity = "0";
-        document.getElementById(fadeThis1).style.height = "0px";
-        document.getElementById(fadeThis2).style.opacity = "0";
-        document.getElementById(fadeThis2).style.height = "0px";
-
+        console.log("fadeThis1: ", fadeThis1);
+        console.log("fadeThis2: ", fadeThis2);
+        document.getElementById(elementID).style.paddingBottom = "50%";
     }
-
-};
+}
 
 function deemphasizeImg() {
-    document.getElementById(elementID).style.paddingBottom = "0%";
-    document.getElementById(elementID).style.paddingTop = "0%";
-    document.getElementById(fadeThis1).style.height = "100%";
-    document.getElementById(fadeThis2).style.height = "100%";
-    setTimeout(function () { document.getElementById(fadeThis1).style.opacity = "1"; }, 600);
-    setTimeout(function () { document.getElementById(fadeThis2).style.opacity = "1"; }, 600);
-    setTimeout(function () { document.getElementById(elementID).style.opacity = "1"; }, 600);
-    setTimeout(function () { allowFade = true; }, 600);
-};
+    if (elementID = 'img-rt') {
+        document.getElementById(elementID).style.padding = "0%";
+    }
+}
+// function emphasizeImg() {
+
+//     if (allowFade == true) {
+
+//         allowFade = false;
+
+//         console.log("recognized hover");
+//         //find the img height
+//         // var h = 0;
+
+//         // h = document.getElementsByTagName('img').height;
+//         // console.log(h);
+//         console.log("Element ID: ", elementID);
+
+//         if (elementID === 'img-rt') {
+//             //change the div height
+//             document.getElementById(elementID).style.paddingBottom = "50%";
+//         } else if (elementID === 'img-rm') {
+//             document.getElementById(elementID).style.paddingTop = "25%";
+//             document.getElementById(elementID).style.paddingBottom = "25%";
+//         } else if (elementID === 'img-rb') {
+//             document.getElementById(elementID).style.paddingTop = "50%";
+//             // document.getElementById('right-bottom').style.position = "relative";
+            
+//         }
+
+//         //hide the other divs
+
+//         // document.getElementById(fadeThis1).style.opacity = "0";
+//         // document.getElementById(fadeThis1).style.height = "0px";
+//         // document.getElementById(fadeThis2).style.opacity = "0";
+//         // document.getElementById(fadeThis2).style.height = "0px";
+
+//     }
+
+// };
+
+// function deemphasizeImg() {
+//     document.getElementById(elementID).style.paddingBottom = "0%";
+//     document.getElementById(elementID).style.paddingTop = "0%";
+//     document.getElementById(fadeThis2).style.height = "100%";
+//     document.getElementById(fadeThis1).style.height = "100%";
+//     // document.getElementById(fadeThis1).style.opacity = "1";
+//     // document.getElementById(fadeThis2).style.opacity = "1";
+//     setTimeout(function () { document.getElementById(fadeThis1).style.opacity = "1"; }, 600);
+//     setTimeout(function () { document.getElementById(fadeThis2).style.opacity = "1"; }, 600);
+//     setTimeout(function () { document.getElementById(elementID).style.opacity = "1"; }, 600);
+//     setTimeout(function () { allowFade = true; }, 600);
+// };
 
 // create a wrap right div
 

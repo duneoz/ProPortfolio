@@ -143,7 +143,7 @@ img {
 #img-rm {
     display: flex;
     align-items: center;
-    transition: padding-top .5s ease-in-out, padding-bottom .5s ease-in-out, height .5s ease-in-out;
+    transition: padding-top .5s ease-in-out, padding-bottom .5s ease-in-out, height .5s ease-in-out; opacity: .5s ease-in-out;
 }
 
 #img-rb {
