@@ -1,4 +1,4 @@
-window.onload = function() {
+
 //declare a variable that holds the current opacity level, declare variable for up or down
 var variable1 = "up";
 var variable2 = 0;
@@ -132,4 +132,3 @@ function deemphasizeImg() {
 // create a wrap right div
 
 // manipulate DOM to 
-};
