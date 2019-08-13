@@ -112,7 +112,7 @@ body > #right-middle:hover ~ #right-top {
     left: 0px;
     /* display: none; */
     /* opacity: 0; */
-    animation: fade 3s alternate infinite;
+    animation: fade 2s alternate infinite;
 }
 
 @keyframes fade {
