@@ -22,7 +22,7 @@ body::-webkit-scrollbar {
     }
 
 img {
-    max-height: 150%;
+    max-height: 125%;
     width: auto;
     offset: 50% 50%;
 }

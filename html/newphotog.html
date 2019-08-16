@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<title>
-		Automatically Scroll The Window When The User Approaches The Viewport Edge In JavaScript
+		Nick Meyers | Photography
 	</title>
 
 	<!-- CSS -->
@@ -217,8 +217,8 @@
 		// scrolling will be initiated and with what intensity it is taking place.
 		function drawGridLines() {
 
-			var increment = 300;
-			var incrementCount = 300;
+			var increment = 250;
+			var incrementCount = 250;
 			var maxDimension = (increment * incrementCount);
 			var imgSource = "";
 			var imgCount = 1;
@@ -226,7 +226,7 @@
 
 			// Draw the boxes that make up the grid.
 			for (var x = 0; x < 10; x++) {
-				for (var y = 0; y < 5; y++) {
+				for (var y = 0; y < 7; y++) {
 
 					var xOffset = (x * increment);
 					var yOffset = (y * increment);
@@ -277,10 +277,10 @@
 			// Draw the edges that delineate the scrolling zone.
 			var edge = document.createElement("span");
 			edge.style.position = "fixed";
-			edge.style.top = ("30%");
-			edge.style.bottom = ("30%");
-			edge.style.left = ("30%");
-			edge.style.right = ("30%");
+			edge.style.top = ("400px");
+			edge.style.bottom = ("400px");
+			edge.style.left = ("400px");
+			edge.style.right = ("400px");
 			// edge.style.border = "2px solid #CC0000";
 			edge.style.borderRadius = "5px 5px 5px 5px";
 			document.body.appendChild(edge);
