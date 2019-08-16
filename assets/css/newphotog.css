@@ -1,0 +1,28 @@
+.show-me:hover {
+    /* opacity: .25; */
+    background-color: #3e3e3e;
+    /* position: relative; */
+    box-shadow: 1px 1px 15px 10px black inset;
+    border: 1px hotpink solid;
+    /* z-index: ; */
+    /* margin: 2px; */
+    
+}
+
+.show-me:hover img{
+    opacity: .25;
+}
+
+h1:hover {
+    background-color: #3e3e3e;
+}
+
+body::-webkit-scrollbar {
+     display: none; 
+    }
+
+img {
+    max-height: 150%;
+    width: auto;
+    offset: 50% 50%;
+}
