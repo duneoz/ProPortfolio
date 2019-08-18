@@ -37,12 +37,12 @@ img {
 }
 
 body {
-background: linear-gradient(228deg, #e72727, #ef8221, #f6f62f, #45ed1a);
-background-size: 800% 800%;
+    background: linear-gradient(270deg, #f21616, #e3f216, #16f24f);
+background-size: 300% 100%;
 
--webkit-animation: AnimationName 6s ease infinite;
-animation: AnimationName 6s ease infinite;
-
+-webkit-animation: AnimationName 15s ease infinite;
+-moz-animation: AnimationName 30s ease infinite;
+animation: AnimationName 30s ease infinite;
 
 }
 
@@ -51,8 +51,13 @@ animation: AnimationName 6s ease infinite;
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
-@keyframes AnimationName { 
+@-moz-keyframes AnimationName {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 50%}
+    50%{background-position:65% 50%}
     100%{background-position:0% 50%}
 }
