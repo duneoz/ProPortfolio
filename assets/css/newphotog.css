@@ -6,8 +6,18 @@
     border: 1px hotpink solid;
     /* z-index: ; */
     /* margin: 2px; */
+    animation: pulse 1s infinite;
+    animation-timing-function: linear;
+    z-index: 5;
     
 }
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+    }
+
 
 .show-me:hover img{
     opacity: .25;
@@ -24,5 +34,25 @@ body::-webkit-scrollbar {
 img {
     max-height: 100%;
     width: auto;
-    offset: 50% 50%;
+}
+
+body {
+background: linear-gradient(228deg, #e72727, #ef8221, #f6f62f, #45ed1a);
+background-size: 800% 800%;
+
+-webkit-animation: AnimationName 6s ease infinite;
+animation: AnimationName 6s ease infinite;
+
+
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
