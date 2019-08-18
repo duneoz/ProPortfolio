@@ -223,13 +223,32 @@
 			var imgSource = "";
 			var imgCount = 1;
 			var addZero;
+			var xAdd = 0;
+			var yAdd = 0;
 
 			// Draw the boxes that make up the grid.
 			for (var x = 0; x < 10; x++) {
+
+				// if (x = 0) {
+				// 		xAdd = 0;
+				// 	} else {
+				// 		xAdd = 10;
+				// 	};
+
 				for (var y = 0; y < 7; y++) {
 
-					var xOffset = (x * increment);
-					var yOffset = (y * increment);
+					// if (y = 0) {
+					// 	yAdd = 0;
+					// } else {
+					// 	yAdd = 10;
+					// };
+
+					if (x > 0) { xAdd = 10 };
+
+					if (y > 0) { yAdd = 10 };
+
+					var xOffset = (x * increment) + 10 + (x * xAdd);
+					var yOffset = (y * increment) + 10 + (y * yAdd);
 
 					var box = document.createElement("span");
 					box.classList.add("show-me");
@@ -238,6 +257,9 @@
 					box.style.left = (xOffset + "px");
 					box.style.height = (increment + "px");
 					box.style.width = (increment + "px");
+					box.style.boxShadow =  "1px 1px 5px 1px #5e5e5e";
+					// box.style.margin = ("10px");
+					box.style.borderRadius = ("15px");
 					// box.style.border = "1px solid #CCCCCC";
 					box.style.font = "11px sans-serif";
 					box.style.color = "#999999";
@@ -245,10 +267,11 @@
 					// box.style.padding = "5px 5px 5px 5px";
 					box.style.zIndex = "1";
 					box.style.overflow = "hidden";
-					box.innerText = (xOffset + ", " + yOffset);
+					// box.innerText = (xOffset + ", " + yOffset);
 					chooseImage();
 					box.innerHTML = "<img src=" + imgSource + ">";
 					document.body.appendChild(box);
+			
 
 
 					function chooseImage() {
@@ -258,12 +281,12 @@
 							addZero = "";
 						}
 
-						imgSource = "../assets/photographs/here/img00" + addZero + imgCount + ".jpg";
+						imgSource = "../assets/photographs/img00" + addZero + imgCount + "sm.jpg";
 
 						if (imgCount > 46) {
 							imgCount = 1;
 						} else {
-						imgCount++;
+							imgCount++;
 						}
 
 					}
