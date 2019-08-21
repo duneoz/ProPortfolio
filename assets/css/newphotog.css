@@ -1,16 +1,15 @@
 .show-me:hover {
-    /* opacity: .25; */
+   
     background-color: #3e3e3e;
-    /* position: relative; */
+    
     box-shadow: 1px 1px 15px 10px black inset;
     border: 1px hotpink solid;
-    /* z-index: ; */
-    /* margin: 2px; */
+   
     animation: pulse 1s infinite;
     animation-timing-function: linear;
-    z-index: 5;
-    
-}
+    /* z-index: 5;  */
+    border-radius: 15px;
+}   
 
 @keyframes pulse {
     0% { transform: scale(1); }
@@ -20,12 +19,18 @@
 
 
 .show-me:hover img{
-    opacity: .25;
+    border-radius: 15px;
 }
 
-h1:hover {
-    background-color: #3e3e3e;
+.show-me {
+    overflow: hidden;
+    border-radius: 125px;
+    transition: border-radius 1s ease-in-out;
 }
+
+/* h1:hover {
+    background-color: #3e3e3e;
+} */
 
 body::-webkit-scrollbar {
      display: none; 
@@ -34,6 +39,7 @@ body::-webkit-scrollbar {
 img {
     max-height: 100%;
     width: auto;
+    transition: border-radius 1s ease-in-out;
 }
 
 body {
