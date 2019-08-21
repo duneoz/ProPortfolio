@@ -251,6 +251,9 @@
 					var yOffset = (y * increment) + 20 + (y * yAdd);
 
 					var box = document.createElement("span");
+					chooseImage();
+					box.setAttribute("id", imgSource);
+					box.setAttribute("onclick", "showLarge(this.id)");
 					box.classList.add("show-me");
 					box.style.position = "absolute";
 					box.style.top = (yOffset + "px");
@@ -268,7 +271,6 @@
 					box.style.zIndex = "1";
 					box.style.overflow = "hidden";
 					// box.innerText = (xOffset + ", " + yOffset);
-					chooseImage();
 					box.innerHTML = "<img src=" + imgSource + ">";
 					document.body.appendChild(box);
 			
@@ -316,6 +318,15 @@
 			guard.style.left = "0px";
 			guard.style.right = "0px";
 			document.body.appendChild(guard);
+
+		}
+
+		var bigPic = "";
+
+		function showLarge(clickedID) {
+			alert(clickedID);
+			clickedID = clickedID.replace('sm', '');
+			alert(clickedID);
 
 		}
 
