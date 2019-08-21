@@ -1,22 +1,22 @@
 .show-me:hover {
    
-    background-color: #3e3e3e;
+/*     background-color: #3e3e3e; */
     
     box-shadow: 1px 1px 15px 10px black inset;
     border: 1px hotpink solid;
    
-    animation: pulse 1s infinite;
-    animation-timing-function: linear;
+/*     animation: pulse 1s infinite;
+    animation-timing-function: linear; */
     /* z-index: 5;  */
     border-radius: 15px;
 }   
 
-@keyframes pulse {
+/* @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.02); }
     100% { transform: scale(1); }
     }
-
+ */
 
 .show-me:hover img{
     border-radius: 15px;
