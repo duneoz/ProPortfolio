@@ -341,7 +341,14 @@
 // Get the modal
 var modal = document.getElementById("myModal");
 			modal.style.display = "block";
-			modal.InnerHtml = '<img src="' + clickedID + '" alt="Snow" style="width:100%;max-width:300px">'
+			modal.InnerHtml = '<img src="' + clickedID + '" alt="Snow" style="width:100%;max-width:300px">';
+			// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+			
 		}
 		
 	</script>
