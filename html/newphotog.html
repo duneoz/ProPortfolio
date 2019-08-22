@@ -13,7 +13,18 @@
 </head>
 
 <body onLoad="window.scroll(750, 250)">
+<!-- The Modal -->
+<div id="myModal" class="modal">
 
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+<!--   <div id="caption"></div>
+</div> -->
 	<!-- <h1>
 		Automatically Scroll The Window When The User Approaches The Viewport Edge In JavaScript
 	</h1> -->
@@ -321,15 +332,18 @@
 
 		}
 
-		var bigPic = "";
+// 		var bigPic = "";
 
 		function showLarge(clickedID) {
 			console.log(clickedID);
 			clickedID = clickedID.replace('sm', '');
 			console.log(clickedID);
-
+// Get the modal
+var modal = document.getElementById("myModal");
+			modal.style.display = "block";
+			modal.InnerHtml = '<img id="myImg" src="' + clickedID + '" alt="Snow" style="width:100%;max-width:300px">'
 		}
-
+		
 	</script>
 
 </body>
