@@ -20,7 +20,7 @@
   <span class="close">&times;</span>
 
   <!-- Modal Content (The Image) -->
-<!--   <img class="modal-content" id="img01"> -->
+  <img class="modal-content" id="img01">
 
   <!-- Modal Caption (Image Text) -->
 <!--   <div id="caption"></div> -->
@@ -340,9 +340,11 @@
 			console.log(clickedID);
 // Get the modal
 var modal = document.getElementById("myModal");
+var theImg = document.getElementById("img01");
 			modal.style.display = "block";
 			modal.style.zIndex = "5";
-			modal.InnerHTML = '<img src="' + clickedID + '" style="width:100%;max-width:600px">';
+			theImg.src = clickedID;
+			// modal.InnerHTML = '<img src="' + clickedID + '" style="width:100%;max-width:600px">';
 			// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 // When the user clicks on <span> (x), close the modal
